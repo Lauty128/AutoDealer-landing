@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-white text-slate-900 antialiased;
+  }
+}
+
+@layer components {
+  .glass-card {
+    @apply bg-white/80 backdrop-blur-md border border-slate-200 shadow-sm;
+  }
+
+  .btn-primary {
+    @apply bg-primary hover:bg-primary-dark text-white font-semibold py-3 px-6 rounded-xl transition-all duration-200 shadow-md hover:shadow-lg active:scale-95;
+  }
+
+  .section-title {
+    @apply text-3xl md:text-4xl font-bold text-slate-900 mb-4;
+  }
+
+  .section-subtitle {
+    @apply text-lg text-slate-600 max-w-2xl mx-auto mb-12;
+  }
+}

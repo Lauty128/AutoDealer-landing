@@ -1,0 +1,17 @@
+---
+import LandingPage from '../components/LandingPage.tsx';
+import '../index.css';
+---
+
+<html lang="es">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>AutoDealer - Gestión Inteligente para Concesionarios</title>
+	</head>
+	<body>
+		<LandingPage client:load />
+	</body>
+</html>
