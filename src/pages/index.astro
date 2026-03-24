@@ -1,15 +1,62 @@
 ---
 import LandingPage from '../components/LandingPage.tsx';
 import '../index.css';
+
+const title = "AutoDealer - Gestión Inteligente para Concesionarios";
+const description = "Soluciones SaaS y ERP personalizadas para la gestión y promoción de concesionarios de vehículos. Potenciamos tu marca y optimizamos tu operativa diaria.";
+const canonicalURL = new URL(Astro.url.pathname, Astro.site || 'https://autodealer.com.ar');
+const ogImage = "https://autodealer.com.ar/img/logo.png";
 ---
 
 <html lang="es">
 	<head>
 		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="icon" type="image/png" href="/img/logo.png" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-		<title>AutoDealer - Gestión Inteligente para Concesionarios</title>
+		
+		<!-- Primary Meta Tags -->
+		<title>{title}</title>
+		<meta name="title" content={title} />
+		<meta name="description" content={description} />
+		<meta name="keywords" content="gestión de concesionarios, software automotriz, ERP para agencias de autos, SaaS concesionarios, catálogo online vehículos, AutoDealer, Lautaro Silverii" />
+		<meta name="author" content="Lautaro Silverii" />
+		<link rel="canonical" href={canonicalURL} />
+
+		<!-- Open Graph / Facebook -->
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content={canonicalURL} />
+		<meta property="og:title" content={title} />
+		<meta property="og:description" content={description} />
+		<meta property="og:image" content={ogImage} />
+
+		<!-- Twitter -->
+		<meta property="twitter:card" content="summary_large_image" />
+		<meta property="twitter:url" content={canonicalURL} />
+		<meta property="twitter:title" content={title} />
+		<meta property="twitter:description" content={description} />
+		<meta property="twitter:image" content={ogImage} />
+
+		<!-- Structured Data (JSON-LD) -->
+		<script type="application/ld+json" is:inline>
+			{
+				"@context": "https://schema.org",
+				"@type": "SoftwareApplication",
+				"name": "AutoDealer",
+				"operatingSystem": "Web",
+				"applicationCategory": "BusinessApplication",
+				"description": "Sistema de gestión integral para concesionarios de vehículos.",
+				"author": {
+					"@type": "Person",
+					"name": "Lautaro Silverii"
+				},
+				"offers": {
+					"@type": "Offer",
+					"price": "0",
+					"priceCurrency": "ARS"
+				}
+			}
+		</script>
 	</head>
 	<body>
 		<LandingPage client:load />

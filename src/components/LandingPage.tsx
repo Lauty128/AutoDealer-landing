@@ -37,7 +37,7 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-20 items-center">
           <div className="flex items-center gap-2">
-            <img src="/logo-h.png" alt="Logo AutoDealer" width={170} />
+            <img src="/landing/logo-h.png" alt="Logo AutoDealer" width={170} />
           </div>
           
           <div className="hidden md:flex items-center gap-8">
@@ -248,7 +248,7 @@ const History = () => (
             <div className="pt-8 border-t border-slate-100 flex items-center gap-4">
               <div className="w-16 h-16 rounded-full bg-slate-200 overflow-hidden">
                 <img 
-                  src="https://picsum.photos/seed/ceo-lautaro/100/100" 
+                  src="/img/me.jpeg" 
                   alt="Lautaro Silverii" 
                   className="w-full h-full object-cover"
                   referrerPolicy="no-referrer"
@@ -270,8 +270,9 @@ const Contact = () => {
   const [formData, setFormData] = useState({
     nombre: '',
     email: '',
+    telefono: '',
     concesionario: '',
-    motivo: 'consulta',
+    asunto: 'consulta',
     mensaje: ''
   });
 
@@ -307,7 +308,7 @@ const Contact = () => {
                 </div>
                 <div>
                   <p className="text-xs text-slate-500 uppercase tracking-widest font-bold">WhatsApp</p>
-                  <p className="text-lg">+54 9 11 1234-5678</p>
+                  <p className="text-lg">+54 2284-552868</p>
                 </div>
               </div>
               <div className="flex items-center gap-4">
@@ -326,7 +327,7 @@ const Contact = () => {
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="grid md:grid-cols-2 gap-6">
                 <div className="space-y-2">
-                  <label className="text-sm font-bold text-slate-700">Nombre Completo</label>
+                  <label className="text-sm font-bold text-slate-700">Nombre Completo *</label>
                   <input 
                     type="text" 
                     required
@@ -335,8 +336,21 @@ const Contact = () => {
                     onChange={(e) => setFormData({...formData, nombre: e.target.value})}
                   />
                 </div>
+
                 <div className="space-y-2">
-                  <label className="text-sm font-bold text-slate-700">Email</label>
+                  <label className="text-sm font-bold text-slate-700">Telefono de contacto *</label>
+                  <input 
+                    type="text" 
+                    required
+                    className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all"
+                    placeholder="Ej: 2284 000000"
+                    onChange={(e) => setFormData({...formData, telefono: e.target.value})}
+                  />
+                </div>
+              </div>
+
+              <div className="space-y-2">
+                  <label className="text-sm font-bold text-slate-700">Email *</label>
                   <input 
                     type="email" 
                     required
@@ -344,7 +358,6 @@ const Contact = () => {
                     placeholder="juan@concesionario.com"
                     onChange={(e) => setFormData({...formData, email: e.target.value})}
                   />
-                </div>
               </div>
               
               <div className="space-y-2">
@@ -361,7 +374,7 @@ const Contact = () => {
                 <label className="text-sm font-bold text-slate-700">Motivo de Contacto</label>
                 <select 
                   className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all bg-white"
-                  onChange={(e) => setFormData({...formData, motivo: e.target.value})}
+                  onChange={(e) => setFormData({...formData, asunto: e.target.value})}
                 >
                   <option value="consulta">Consultar sobre el sistema</option>
                   <option value="contratar">Contratar servicio</option>
@@ -380,7 +393,7 @@ const Contact = () => {
                 ></textarea>
               </div>
 
-              <button type="submit" className="btn-primary w-full flex items-center justify-center gap-2">
+              <button type="submit" id='submitButton' className="btn-primary w-full flex items-center justify-center gap-2">
                 Enviar Mensaje <ArrowRight className="w-4 h-4" />
               </button>
             </form>
@@ -395,7 +408,7 @@ const Footer = () => (
   <footer className="py-12 border-t border-slate-100">
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div className="flex flex-col md:flex-row justify-between items-center gap-8">
-        <img src="/logo.png" width={100} alt="" />
+        <img src="/landing/logo.png" width={100} alt="" />
         
         <div className="text-slate-500 text-sm">
           © {new Date().getFullYear()} AutoDealer. Todos los derechos reservados.
