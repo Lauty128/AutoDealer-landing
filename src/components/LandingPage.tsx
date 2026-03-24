@@ -360,7 +360,7 @@ const Contact = () => {
               <div className="space-y-2">
                 <label className="text-sm font-bold text-slate-700">Motivo de Contacto</label>
                 <select 
-                  className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all appearance-none bg-white"
+                  className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all bg-white"
                   onChange={(e) => setFormData({...formData, motivo: e.target.value})}
                 >
                   <option value="consulta">Consultar sobre el sistema</option>
