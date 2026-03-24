@@ -18,6 +18,17 @@ import {
 } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 
+// Interfaces
+interface ServiceCardIterface {
+  icon: any, 
+  title: string 
+  subtitle: string 
+  features: string[]
+  price: string
+  type: string 
+  dark?: boolean
+}
+
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -99,7 +110,7 @@ const Hero = () => (
   </section>
 );
 
-const ServiceCard = ({ icon: Icon, title, subtitle, features, price, type, dark = false }) => (
+const ServiceCard = ({ icon: Icon, title, subtitle, features, price, type, dark = false }: ServiceCardIterface) => (
   <motion.div 
     whileHover={{ y: -10 }}
     className={`p-8 rounded-3xl border ${dark ? 'bg-slate-900 text-white border-slate-800' : 'bg-white text-slate-900 border-slate-200'} shadow-xl relative overflow-hidden`}
@@ -116,10 +127,10 @@ const ServiceCard = ({ icon: Icon, title, subtitle, features, price, type, dark 
     <p className={`text-sm mb-8 ${dark ? 'text-slate-400' : 'text-slate-500'}`}>{subtitle}</p>
     
     <ul className="space-y-4 mb-10">
-      {features.map((f, i) => (
+      {features.map((feature, i) => (
         <li key={i} className="flex items-start gap-3 text-sm">
           <CheckCircle2 className="w-5 h-5 text-primary shrink-0" />
-          <span>{f}</span>
+          <span>{feature}</span>
         </li>
       ))}
     </ul>
@@ -175,7 +186,7 @@ const Services = () => (
             "Módulos desarrollados a medida"
           ]}
           price="Costo de Entrada + Mensual"
-          dark
+          dark={true}
         />
       </div>
 
@@ -384,14 +395,7 @@ const Footer = () => (
   <footer className="py-12 border-t border-slate-100">
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div className="flex flex-col md:flex-row justify-between items-center gap-8">
-        <div className="flex items-center gap-2">
-          <div className="w-8 h-8 bg-primary rounded flex items-center justify-center">
-            <Car className="text-white w-5 h-5" />
-          </div>
-          <span className="text-xl font-bold tracking-tight text-slate-900">
-            Auto<span className="text-primary">Dealer</span>
-          </span>
-        </div>
+        <img src="/logo.png" width={100} alt="" />
         
         <div className="text-slate-500 text-sm">
           © {new Date().getFullYear()} AutoDealer. Todos los derechos reservados.
