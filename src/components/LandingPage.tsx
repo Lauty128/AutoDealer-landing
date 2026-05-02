@@ -334,7 +334,7 @@ const Contact = () => {
                 </div>
                 <div>
                   <p className="text-xs text-slate-500 uppercase tracking-widest font-bold">Email</p>
-                  <p className="text-lg">contacto@autodealer.com.ar</p>
+                  <p className="text-lg">administracion@autodealer.com.ar</p>
                 </div>
               </div>
               <div className="flex items-center gap-4">
