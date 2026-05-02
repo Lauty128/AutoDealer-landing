@@ -343,7 +343,7 @@ const Contact = () => {
                 </div>
                 <div>
                   <p className="text-xs text-slate-500 uppercase tracking-widest font-bold">WhatsApp</p>
-                  <p className="text-lg">+54 2284-552868</p>
+                  <p className="text-lg">+54 2284-530866</p>
                 </div>
               </div>
               <div className="flex items-center gap-4">
