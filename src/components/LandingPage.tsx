@@ -17,6 +17,7 @@ import {
   X
 } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
+import { Showcase } from './Showcase';
 
 // Interfaces
 interface ServiceCardIterface {
@@ -571,6 +572,7 @@ export default function App() {
         <Hero />
         <Services />
         <Benefits />
+        <Showcase />
         <History />
         <Contact />
       </main>
