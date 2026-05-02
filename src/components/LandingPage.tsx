@@ -275,10 +275,44 @@ const Contact = () => {
     asunto: 'consulta',
     mensaje: ''
   });
+  const [status, setStatus] = useState<{ type: 'success' | 'error' | null, message: string }>({ type: null, message: '' });
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    alert('Gracias por tu interés. Nos pondremos en contacto pronto.');
+    setIsSubmitting(true);
+    setStatus({ type: null, message: '' });
+
+    try {
+      const response = await fetch('https://autodealer.com.ar/api/enviar-mail', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': '*/*'
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const result = await response.json();
+
+      if (response.ok && result.success) {
+        setStatus({ type: 'success', message: result.message });
+        setFormData({
+          nombre: '',
+          email: '',
+          telefono: '',
+          concesionario: '',
+          asunto: 'consulta',
+          mensaje: ''
+        });
+      } else {
+        setStatus({ type: 'error', message: result.message || 'Hubo un error al enviar el mensaje. Por favor, intenta nuevamente.' });
+      }
+    } catch (error) {
+      setStatus({ type: 'error', message: 'Error de conexión. Por favor, verifica tu internet e intenta nuevamente.' });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -331,6 +365,7 @@ const Contact = () => {
                   <input 
                     type="text" 
                     required
+                    value={formData.nombre}
                     className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all"
                     placeholder="Ej: Juan Pérez"
                     onChange={(e) => setFormData({...formData, nombre: e.target.value})}
@@ -342,6 +377,7 @@ const Contact = () => {
                   <input 
                     type="text" 
                     required
+                    value={formData.telefono}
                     className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all"
                     placeholder="Ej: 2284 000000"
                     onChange={(e) => setFormData({...formData, telefono: e.target.value})}
@@ -354,6 +390,7 @@ const Contact = () => {
                   <input 
                     type="email" 
                     required
+                    value={formData.email}
                     className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all"
                     placeholder="juan@concesionario.com"
                     onChange={(e) => setFormData({...formData, email: e.target.value})}
@@ -364,6 +401,7 @@ const Contact = () => {
                 <label className="text-sm font-bold text-slate-700">Nombre del Concesionario</label>
                 <input 
                   type="text" 
+                  value={formData.concesionario}
                   className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all"
                   placeholder="Ej: Automotores Centro"
                   onChange={(e) => setFormData({...formData, concesionario: e.target.value})}
@@ -373,6 +411,7 @@ const Contact = () => {
               <div className="space-y-2">
                 <label className="text-sm font-bold text-slate-700">Motivo de Contacto</label>
                 <select 
+                  value={formData.asunto}
                   className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all bg-white"
                   onChange={(e) => setFormData({...formData, asunto: e.target.value})}
                 >
@@ -387,14 +426,32 @@ const Contact = () => {
                 <label className="text-sm font-bold text-slate-700">Mensaje</label>
                 <textarea 
                   rows={4}
+                  value={formData.mensaje}
                   className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all resize-none"
                   placeholder="Cuéntanos un poco más sobre tu necesidad..."
                   onChange={(e) => setFormData({...formData, mensaje: e.target.value})}
                 ></textarea>
               </div>
 
-              <button type="submit" id='submitButton' className="btn-primary w-full flex items-center justify-center gap-2">
-                Enviar Mensaje <ArrowRight className="w-4 h-4" />
+              {status.type && (
+                <motion.div 
+                  initial={{ opacity: 0, y: -10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  className={`p-4 rounded-xl text-sm font-medium ${
+                    status.type === 'success' ? 'bg-emerald-50 text-emerald-700 border border-emerald-100' : 'bg-red-50 text-red-700 border border-red-100'
+                  }`}
+                >
+                  {status.message}
+                </motion.div>
+              )}
+
+              <button 
+                type="submit" 
+                id='submitButton' 
+                disabled={isSubmitting}
+                className={`btn-primary w-full flex items-center justify-center gap-2 ${isSubmitting ? 'opacity-70 cursor-not-allowed' : ''}`}
+              >
+                {isSubmitting ? 'Enviando...' : 'Enviar Mensaje'} <ArrowRight className="w-4 h-4" />
               </button>
             </form>
           </div>
