@@ -114,7 +114,7 @@ const Hero = () => (
 const ServiceCard = ({ icon: Icon, title, subtitle, features, price, type, dark = false }: ServiceCardIterface) => (
   <motion.div 
     whileHover={{ y: -10 }}
-    className={`p-8 rounded-3xl border ${dark ? 'bg-slate-900 text-white border-slate-800' : 'bg-white text-slate-900 border-slate-200'} shadow-xl relative overflow-hidden`}
+    className={`p-8 rounded-3xl border ${dark ? 'bg-slate-900 text-white border-slate-800' : 'bg-white text-slate-900 border-slate-200'} shadow-xl relative overflow-hidden flex flex-col h-full`}
   >
     {type === 'SaaS' && (
       <div className="absolute top-0 right-0 bg-primary text-white text-[10px] font-bold px-4 py-1 rounded-bl-xl uppercase tracking-widest">
@@ -161,14 +161,14 @@ const Services = () => (
           icon={LayoutDashboard}
           type="SaaS"
           title="AutoDealer SaaS"
-          subtitle="Gestión ágil para concesionarios pequeños y medianos."
+          subtitle="Herramienta ágil de catálogo digital y promoción de marca. No incluye herramientas de gestión operativa."
           features={[
-            "Control de stock de vehículos",
-            "Gestión de ingresos y egresos (ARS/USD)",
-            "Registro de ventas con/sin permuta",
-            "Historial de ventas por vendedor",
-            "Catálogo online autogenerado para clientes",
-            "Acceso inmediato sin costo de entrada"
+            "Catálogo digital autogenerado para clientes",
+            "Administración multi-concesionaria (varias agencias)",
+            "Herramientas de publicación de vehículos",
+            "Mayor alcance y llegada a los clientes",
+            "Acceso desde cualquier lugar y dispositivo móvil",
+            "Diseñado exclusivamente para promoción online"
           ]}
           price="Abono Mensual"
         />
@@ -176,15 +176,19 @@ const Services = () => (
           icon={Database}
           type="ERP"
           title="AutoDealer Dedicado"
-          subtitle="ERP robusto para operaciones de gran escala."
+          subtitle="El verdadero sistema de AutoDealer. Un ERP completo e integral para gestionar toda tu operación."
           features={[
-            "Todo lo incluido en SaaS",
-            "Cartera de clientes con historial completo",
-            "Múltiples cajas por sucursal",
-            "Base de datos propia y dedicada",
-            "Gestión de adjuntos por movimiento",
-            "Contratos de financiación y consignación",
-            "Módulos desarrollados a medida"
+            "Todo lo incluido en el Plan SaaS",
+            "Gestión completa de vehículos y stock",
+            "Manejo y control de ingresos y egresos",
+            "Manejo de cajas relacionadas entre concesionarios",
+            "Ventas de unidades (distintos pagos, permutas y financiación)",
+            "Planes 0KM y planes de financiación integrados",
+            "Gestión de contratos de consignación",
+            "Generación automática de boletos de compra-venta",
+            "Fichas de vehículos con historial y balance de unidad",
+            "Cuentas corrientes de clientes y emisión de remitos de pagos",
+            "ERP integral y robusto diseñado a medida"
           ]}
           price="Costo de Entrada + Mensual"
           dark={true}
