@@ -472,8 +472,10 @@ const Footer = () => (
       <div className="flex flex-col md:flex-row justify-between items-center gap-8">
         <img src="/landing/logo.png" width={100} alt="AutoDealer - Gestión inteligente para concesionarios" />
         
-        <div className="text-slate-500 text-sm">
-          © {new Date().getFullYear()} AutoDealer. Todos los derechos reservados.
+        <div className="text-slate-500 text-sm flex flex-col md:flex-row items-center gap-4">
+          <span>© {new Date().getFullYear()} AutoDealer. Todos los derechos reservados.</span>
+          <span className="hidden md:inline text-slate-200">|</span>
+          <a href="/politicas-de-privacidad" className="text-slate-600 hover:text-primary transition-colors font-medium">Políticas de Privacidad</a>
         </div>
         
         <div className="flex gap-6">

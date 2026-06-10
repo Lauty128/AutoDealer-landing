@@ -1,0 +1,199 @@
+---
+import '../index.css';
+
+const title = "Políticas de Privacidad - AutoDealer";
+const description = "Políticas de privacidad y tratamiento de datos personales de AutoDealer. Conocé cómo protegemos tu información.";
+const canonicalURL = new URL(Astro.url.pathname, Astro.site || 'https://autodealer.com.ar');
+---
+
+<html lang="es">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/png" href="/logo.png" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="theme-color" content="#dcac0c" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+
+		<title>{title}</title>
+		<meta name="title" content={title} />
+		<meta name="description" content={description} />
+		<link rel="canonical" href={canonicalURL} />
+	</head>
+	<body class="bg-slate-50 text-slate-900 antialiased font-sans flex flex-col min-h-screen selection:bg-primary/30 selection:text-primary-dark">
+		<!-- Navegación -->
+		<nav class="fixed w-full z-50 bg-white/90 backdrop-blur-md border-b border-slate-100" aria-label="Navegación principal">
+			<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+				<div class="flex justify-between h-20 items-center">
+					<div class="flex items-center gap-2">
+						<a href="/" class="flex items-center">
+							<img src="/landing/logo-h.png" alt="AutoDealer" width="170" />
+						</a>
+					</div>
+					
+					<div class="flex items-center gap-8">
+						<a href="/#servicios" class="text-sm font-medium text-slate-600 hover:text-primary transition-colors">Servicios</a>
+						<a href="/#historia" class="text-sm font-medium text-slate-600 hover:text-primary transition-colors">Historia</a>
+						<a href="/#contacto" class="btn-primary !py-2 !px-5 text-sm">Contactar</a>
+					</div>
+				</div>
+			</div>
+		</nav>
+
+		<!-- Hero Section -->
+		<header class="relative pt-36 pb-20 overflow-hidden bg-slate-900 text-white">
+			<div class="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full -z-10 opacity-10">
+				<div class="absolute top-20 left-10 w-72 h-72 bg-primary rounded-full blur-3xl" />
+				<div class="absolute bottom-20 right-10 w-96 h-96 bg-primary rounded-full blur-3xl" />
+			</div>
+			<div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+				<span class="inline-block py-1 px-3 rounded-full bg-primary/20 text-primary-light text-xs font-bold uppercase tracking-wider mb-4">
+					Legal
+				</span>
+				<h1 class="text-4xl md:text-5xl font-black tracking-tight mb-4">
+					Políticas de <span class="text-primary">Privacidad</span>
+				</h1>
+				<p class="text-slate-400 text-sm max-w-xl mx-auto">
+					Última actualización: 10 de junio de 2026. Tu privacidad y la seguridad de tus datos son nuestra prioridad absoluta.
+				</p>
+			</div>
+		</header>
+
+		<!-- Content Section -->
+		<main class="flex-grow py-16">
+			<div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+				<div class="bg-white rounded-3xl border border-slate-200/80 shadow-xl p-8 md:p-12 space-y-10">
+					
+					<!-- Volver al Inicio -->
+					<div class="flex justify-start">
+						<a href="/" class="inline-flex items-center gap-2 text-sm font-semibold text-slate-500 hover:text-primary transition-colors">
+							<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-left"><path d="m12 19-7-7 7-7"/><path d="M19 12H5"/></svg>
+							Volver al inicio
+						</a>
+					</div>
+
+					<section class="space-y-4">
+						<h2 class="text-2xl font-bold text-slate-900 border-b border-slate-100 pb-2 flex items-center gap-3">
+							<span class="w-8 h-8 rounded-lg bg-primary/10 text-primary flex items-center justify-center font-bold text-base">1</span>
+							Introducción
+						</h2>
+						<p class="text-slate-600 leading-relaxed">
+							En <strong>AutoDealer</strong>, accesible desde <a href="https://autodealer.com.ar" class="text-primary hover:underline">https://autodealer.com.ar</a>, nos tomamos muy en serio la confidencialidad de la información de nuestros usuarios. Esta Política de Privacidad describe los tipos de información que recopilamos, cómo la utilizamos y qué medidas tomamos para protegerla.
+						</p>
+						<p class="text-slate-600 leading-relaxed">
+							Al utilizar nuestro sitio web y enviar formularios de contacto, aceptas las prácticas descritas en esta política.
+						</p>
+					</section>
+
+					<section class="space-y-4">
+						<h2 class="text-2xl font-bold text-slate-900 border-b border-slate-100 pb-2 flex items-center gap-3">
+							<span class="w-8 h-8 rounded-lg bg-primary/10 text-primary flex items-center justify-center font-bold text-base">2</span>
+							Información que Recopilamos
+						</h2>
+						<p class="text-slate-600 leading-relaxed">
+							Recopilamos información personal que nos proporcionas voluntariamente a través de nuestros formularios de contacto, solicitudes de demostración y correos electrónicos. Esto incluye:
+						</p>
+						<ul class="list-disc pl-6 space-y-2 text-slate-600">
+							<li><strong>Nombre completo:</strong> Para identificar al remitente de la consulta de forma personalizada.</li>
+							<li><strong>Correo electrónico de contacto:</strong> Para responder a tus inquietudes y enviar actualizaciones del servicio.</li>
+							<li><strong>Teléfono de contacto:</strong> Para establecer una vía de comunicación directa vía llamada o WhatsApp.</li>
+							<li><strong>Nombre del concesionario:</strong> Para comprender mejor el contexto de tu negocio y ofrecer una asesoría adecuada.</li>
+							<li><strong>Información de la consulta:</strong> Cualquier detalle o mensaje adicional que decidas escribir sobre tu necesidad.</li>
+						</ul>
+					</section>
+
+					<section class="space-y-4">
+						<h2 class="text-2xl font-bold text-slate-900 border-b border-slate-100 pb-2 flex items-center gap-3">
+							<span class="w-8 h-8 rounded-lg bg-primary/10 text-primary flex items-center justify-center font-bold text-base">3</span>
+							Cómo Usamos la Información
+						</h2>
+						<p class="text-slate-600 leading-relaxed">
+							Utilizamos la información recopilada con las siguientes finalidades comerciales y operativas:
+						</p>
+						<ul class="list-disc pl-6 space-y-2 text-slate-600">
+							<li>Responder a tus preguntas, comentarios o solicitudes enviadas a través del formulario de contacto.</li>
+							<li>Brindarte asesoramiento especializado sobre nuestros planes de software (AutoDealer SaaS o AutoDealer Dedicado).</li>
+							<li>Coordinar demostraciones de nuestro software ERP para tu concesionaria.</li>
+							<li>Enviarte información importante o actualizaciones relacionadas con el servicio contratado.</li>
+							<li>Prevenir actividades fraudulentas y garantizar la seguridad del sitio web.</li>
+						</ul>
+					</section>
+
+					<section class="space-y-4">
+						<h2 class="text-2xl font-bold text-slate-900 border-b border-slate-100 pb-2 flex items-center gap-3">
+							<span class="w-8 h-8 rounded-lg bg-primary/10 text-primary flex items-center justify-center font-bold text-base">4</span>
+							Protección y Seguridad de los Datos
+						</h2>
+						<p class="text-slate-600 leading-relaxed">
+							Implementamos medidas de seguridad técnicas y organizativas para proteger tus datos contra el acceso no autorizado, la alteración, divulgación o destrucción accidental. 
+						</p>
+						<p class="text-slate-600 leading-relaxed">
+							Toda la comunicación de datos entre el formulario web y el servidor de correo se realiza mediante conexiones encriptadas seguras (SSL/TLS). Sin embargo, te recordamos que ningún método de transmisión por Internet o almacenamiento electrónico es 100% seguro.
+						</p>
+					</section>
+
+					<section class="space-y-4">
+						<h2 class="text-2xl font-bold text-slate-900 border-b border-slate-100 pb-2 flex items-center gap-3">
+							<span class="w-8 h-8 rounded-lg bg-primary/10 text-primary flex items-center justify-center font-bold text-base">5</span>
+							Tus Derechos de Control de Datos
+						</h2>
+						<p class="text-slate-600 leading-relaxed">
+							En cumplimiento con las normativas de protección de datos personales vigentes, tienes derecho a:
+						</p>
+						<ul class="list-disc pl-6 space-y-2 text-slate-600">
+							<li>Solicitar información sobre qué datos personales tenemos almacenados sobre ti.</li>
+							<li>Pedir la corrección o actualización de datos incorrectos o incompletos.</li>
+							<li>Solicitar la eliminación definitiva de tus datos de nuestros sistemas de contacto en cualquier momento.</li>
+						</ul>
+						<p class="text-slate-600 leading-relaxed">
+							Para ejercer cualquiera de estos derechos, puedes enviarnos un correo a <a href="mailto:administracion@autodealer.com.ar" class="text-primary font-semibold hover:underline">administracion@autodealer.com.ar</a>.
+						</p>
+					</section>
+
+					<section class="space-y-4">
+						<h2 class="text-2xl font-bold text-slate-900 border-b border-slate-100 pb-2 flex items-center gap-3">
+							<span class="w-8 h-8 rounded-lg bg-primary/10 text-primary flex items-center justify-center font-bold text-base">6</span>
+							Modificaciones a esta Política
+						</h2>
+						<p class="text-slate-600 leading-relaxed">
+							Nos reservamos el derecho de actualizar esta Política de Privacidad en cualquier momento. Te recomendamos revisar esta página periódicamente para mantenerte informado sobre cómo protegemos tu información personal.
+						</p>
+					</section>
+
+					<section class="space-y-4">
+						<h2 class="text-2xl font-bold text-slate-900 border-b border-slate-100 pb-2 flex items-center gap-3">
+							<span class="w-8 h-8 rounded-lg bg-primary/10 text-primary flex items-center justify-center font-bold text-base">7</span>
+							Contacto y Soporte
+						</h2>
+						<p class="text-slate-600 leading-relaxed">
+							Si tienes alguna duda o sugerencia sobre nuestra Política de Privacidad, no dudes en ponerte en contacto con nosotros escribiendo a:
+						</p>
+						<div class="bg-slate-50 p-6 rounded-2xl border border-slate-150 inline-block">
+							<p class="text-slate-700 font-medium">AutoDealer Software</p>
+							<p class="text-slate-600 text-sm">Email: <a href="mailto:administracion@autodealer.com.ar" class="text-primary hover:underline">administracion@autodealer.com.ar</a></p>
+							<p class="text-slate-600 text-sm">WhatsApp: +54 2284-530866</p>
+						</div>
+					</section>
+				</div>
+			</div>
+		</main>
+
+		<!-- Footer -->
+		<footer class="py-12 border-t border-slate-150 bg-white" role="contentinfo">
+			<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+				<div class="flex flex-col md:flex-row justify-between items-center gap-8">
+					<a href="/">
+						<img src="/landing/logo.png" width="100" alt="AutoDealer" />
+					</a>
+					
+					<div class="text-slate-500 text-sm flex flex-col md:flex-row items-center gap-4">
+						<span>© {new Date().getFullYear()} AutoDealer. Todos los derechos reservados.</span>
+						<span class="hidden md:inline text-slate-300">|</span>
+						<a href="/politicas-de-privacidad" class="text-slate-600 hover:text-primary transition-colors font-medium">Políticas de Privacidad</a>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</body>
+</html>
