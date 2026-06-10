@@ -2,24 +2,30 @@
 import LandingPage from '../components/LandingPage.tsx';
 import '../index.css';
 
-const title = "AutoDealer - Gestión Inteligente para Concesionarios";
-const description = "Soluciones SaaS y ERP personalizadas para la gestión y promoción de concesionarios de vehículos. Potenciamos tu marca y optimizamos tu operativa diaria.";
+const title = "AutoDealer - Sistema de Gestión y Catálogo Digital para Concesionarios de Vehículos";
+const description = "Software ERP integral y catálogo digital para concesionarios de autos. Gestión de stock, ventas con permutas y financiación, cajas multi-moneda, contratos de consignación, boletos de compra-venta y cuentas corrientes. Potenciá tu concesionaria con AutoDealer.";
 const canonicalURL = new URL(Astro.url.pathname, Astro.site || 'https://autodealer.com.ar');
-const ogImage = "https://autodealer.com.ar/img/logo.png";
+const ogImage = "https://autodealer.com.ar/logo.png";
 ---
 
 <html lang="es">
 	<head>
 		<meta charset="utf-8" />
-		<link rel="icon" type="image/png" href="/img/logo.png" />
-		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/png" href="/logo.png" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<meta name="generator" content={Astro.generator} />
-		
+		<meta name="theme-color" content="#dcac0c" />
+
+		<!-- Preconnect Google Fonts -->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+
 		<!-- Primary Meta Tags -->
 		<title>{title}</title>
 		<meta name="title" content={title} />
 		<meta name="description" content={description} />
-		<meta name="keywords" content="gestión de concesionarios, software automotriz, ERP para agencias de autos, SaaS concesionarios, catálogo online vehículos, AutoDealer, Lautaro Silverii" />
+		<meta name="keywords" content="gestión de concesionarios, software automotriz, ERP para agencias de autos, SaaS concesionarios, catálogo online vehículos, AutoDealer, sistema para concesionarias, gestión de stock de autos, boleto de compra venta automotor, consignación de vehículos, software para concesionarias Argentina, gestión de cajas multi-moneda, ventas con permutas, financiación de vehículos, sistema ERP automotriz, cuenta corriente clientes concesionario, remitos de pago automotor, fichas de vehículos, planes 0KM" />
 		<meta name="author" content="Lautaro Silverii" />
 		<link rel="canonical" href={canonicalURL} />
 
@@ -29,6 +35,8 @@ const ogImage = "https://autodealer.com.ar/img/logo.png";
 		<meta property="og:title" content={title} />
 		<meta property="og:description" content={description} />
 		<meta property="og:image" content={ogImage} />
+		<meta property="og:locale" content="es_AR" />
+		<meta property="og:site_name" content="AutoDealer" />
 
 		<!-- Twitter -->
 		<meta property="twitter:card" content="summary_large_image" />
@@ -39,23 +47,103 @@ const ogImage = "https://autodealer.com.ar/img/logo.png";
 
 		<!-- Structured Data (JSON-LD) -->
 		<script type="application/ld+json" is:inline>
-			{
-				"@context": "https://schema.org",
-				"@type": "SoftwareApplication",
-				"name": "AutoDealer",
-				"operatingSystem": "Web",
-				"applicationCategory": "BusinessApplication",
-				"description": "Sistema de gestión integral para concesionarios de vehículos.",
-				"author": {
-					"@type": "Person",
-					"name": "Lautaro Silverii"
+			[
+				{
+					"@context": "https://schema.org",
+					"@type": "Organization",
+					"name": "AutoDealer",
+					"url": "https://autodealer.com.ar",
+					"logo": "https://autodealer.com.ar/logo.png",
+					"description": "Sistema de gestión integral y catálogo digital para concesionarios de vehículos en Argentina.",
+					"founder": {
+						"@type": "Person",
+						"name": "Lautaro Silverii"
+					},
+					"contactPoint": {
+						"@type": "ContactPoint",
+						"telephone": "+54-2284-530866",
+						"contactType": "sales",
+						"email": "administracion@autodealer.com.ar",
+						"areaServed": "AR",
+						"availableLanguage": "Spanish"
+					},
+					"address": {
+						"@type": "PostalAddress",
+						"addressLocality": "Buenos Aires",
+						"addressCountry": "AR"
+					}
 				},
-				"offers": {
-					"@type": "Offer",
-					"price": "0",
-					"priceCurrency": "ARS"
+				{
+					"@context": "https://schema.org",
+					"@type": "SoftwareApplication",
+					"name": "AutoDealer",
+					"operatingSystem": "Web",
+					"applicationCategory": "BusinessApplication",
+					"description": "ERP integral y catálogo digital para concesionarios: gestión de stock, ventas con permutas y financiación, cajas multi-moneda, contratos de consignación, boletos de compra-venta y cuentas corrientes.",
+					"author": {
+						"@type": "Person",
+						"name": "Lautaro Silverii"
+					},
+					"offers": [
+						{
+							"@type": "Offer",
+							"name": "AutoDealer SaaS",
+							"description": "Catálogo digital y promoción de marca para concesionarios. Multi-concesionario, publicación de vehículos, acceso desde cualquier dispositivo.",
+							"priceCurrency": "ARS",
+							"price": "0",
+							"priceValidUntil": "2027-12-31",
+							"availability": "https://schema.org/InStock"
+						},
+						{
+							"@type": "Offer",
+							"name": "AutoDealer Dedicado",
+							"description": "ERP completo: gestión de vehículos, ingresos/egresos, cajas interconectadas, ventas con permutas y financiación, contratos de consignación, boletos de compra-venta, cuentas corrientes y remitos.",
+							"priceCurrency": "ARS",
+							"price": "0",
+							"priceValidUntil": "2027-12-31",
+							"availability": "https://schema.org/InStock"
+						}
+					]
+				},
+				{
+					"@context": "https://schema.org",
+					"@type": "FAQPage",
+					"mainEntity": [
+						{
+							"@type": "Question",
+							"name": "¿Qué incluye el plan AutoDealer SaaS?",
+							"acceptedAnswer": {
+								"@type": "Answer",
+								"text": "AutoDealer SaaS ofrece un catálogo digital autogenerado para clientes, administración de múltiples concesionarias, herramientas para publicar vehículos, mayor alcance y llegada a clientes, y acceso desde cualquier dispositivo. Es una herramienta de promoción de marca, no incluye gestión operativa."
+							}
+						},
+						{
+							"@type": "Question",
+							"name": "¿Qué es AutoDealer Dedicado?",
+							"acceptedAnswer": {
+								"@type": "Answer",
+								"text": "AutoDealer Dedicado es un ERP completo para concesionarios que incluye todo lo del plan SaaS más gestión de vehículos, control de ingresos y egresos, manejo de cajas interconectadas entre concesionarios, ventas con distintos pagos, permutas y financiación, planes 0KM, contratos de consignación, generación de boletos de compra-venta, fichas de vehículos, cuentas corrientes de clientes y emisión de remitos de pagos."
+							}
+						},
+						{
+							"@type": "Question",
+							"name": "¿AutoDealer funciona en dispositivos móviles?",
+							"acceptedAnswer": {
+								"@type": "Answer",
+								"text": "Sí, AutoDealer es un sistema web accesible desde cualquier dispositivo con navegador: computadoras, tablets y celulares. No requiere instalación de aplicaciones."
+							}
+						},
+						{
+							"@type": "Question",
+							"name": "¿Puedo gestionar varios concesionarios desde AutoDealer?",
+							"acceptedAnswer": {
+								"@type": "Answer",
+								"text": "Sí, tanto el plan SaaS como el Dedicado permiten administrar múltiples concesionarias o sucursales. En el plan Dedicado, las cajas pueden estar interconectadas entre concesionarios."
+							}
+						}
+					]
 				}
-			}
+			]
 		</script>
 	</head>
 	<body>
