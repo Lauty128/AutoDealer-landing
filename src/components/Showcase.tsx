@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { 
-  Car, 
-  Wallet, 
-  Users, 
-  Receipt, 
+import {
+  Car,
+  Wallet,
+  Users,
+  Receipt,
   Maximize2,
   ChevronRight,
   ChevronLeft,
@@ -69,7 +69,7 @@ export const Showcase = () => {
   const prev = () => setActiveTab((prev) => (prev - 1 + screenshots.length) % screenshots.length);
 
   return (
-    <section className="py-24 bg-slate-50 overflow-hidden">
+    <section className="py-24 bg-slate-50 overflow-hidden" id="capturas">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-base font-bold text-primary uppercase tracking-widest mb-4">Experiencia de Usuario</h2>
@@ -86,11 +86,10 @@ export const Showcase = () => {
               <button
                 key={s.id}
                 onClick={() => setActiveTab(idx)}
-                className={`w-full text-left p-6 rounded-2xl transition-all duration-300 border ${
-                  activeTab === idx 
-                    ? 'bg-white border-primary shadow-xl ring-1 ring-primary' 
-                    : 'bg-transparent border-transparent hover:bg-white/50 text-slate-500'
-                }`}
+                className={`w-full text-left p-6 rounded-2xl transition-all duration-300 border ${activeTab === idx
+                  ? 'bg-white border-primary shadow-xl ring-1 ring-primary'
+                  : 'bg-transparent border-transparent hover:bg-white/50 text-slate-500'
+                  }`}
               >
                 <div className="flex items-center gap-4">
                   <div className={`p-3 rounded-xl ${activeTab === idx ? 'bg-primary text-white' : 'bg-slate-200 text-slate-500'}`}>
@@ -129,11 +128,11 @@ export const Showcase = () => {
                     </div>
                     <div className="w-3 h-3 bg-slate-300 rounded-sm" />
                   </div>
-                  
+
                   {/* Image Container */}
                   <div className="relative aspect-[16/10] bg-slate-100 flex items-center justify-center group/img">
-                    <img 
-                      src={screenshots[activeTab].image} 
+                    <img
+                      src={screenshots[activeTab].image}
                       alt={screenshots[activeTab].title}
                       className="w-full h-full object-cover transition-transform duration-700 group-hover/img:scale-105"
                       onError={(e) => {
@@ -141,7 +140,7 @@ export const Showcase = () => {
                       }}
                       referrerPolicy="no-referrer"
                     />
-                    
+
                     {/* Overlay Info */}
                     <div className="absolute inset-x-0 bottom-0 p-8 bg-gradient-to-t from-slate-900/90 via-slate-900/40 to-transparent pt-20 translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
                       <div className="flex items-center gap-4 mb-4">
@@ -156,7 +155,7 @@ export const Showcase = () => {
                     </div>
                   </div>
                 </div>
-                
+
                 {/* Navigation Controls */}
                 <div className="absolute -bottom-6 right-8 flex gap-2">
                   <button onClick={prev} className="w-12 h-12 rounded-full bg-white shadow-lg flex items-center justify-center hover:text-primary transition-colors">

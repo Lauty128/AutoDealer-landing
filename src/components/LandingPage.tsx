@@ -43,7 +43,8 @@ const Navbar = () => {
 
           <div className="hidden md:flex items-center gap-8">
             <a href="#servicios" className="text-sm font-medium text-slate-600 hover:text-primary transition-colors">Servicios</a>
-            <a href="#historia" className="text-sm font-medium text-slate-600 hover:text-primary transition-colors">Historia</a>
+            <a href="#beneficios" className="text-sm font-medium text-slate-600 hover:text-primary transition-colors">Beneficios</a>
+            <a href="#capturas" className="text-sm font-medium text-slate-600 hover:text-primary transition-colors">Capturas</a>
             <a href="#contacto" className="btn-primary !py-2 !px-5 text-sm">Contactar</a>
           </div>
 
@@ -65,7 +66,8 @@ const Navbar = () => {
           >
             <div className="px-4 pt-2 pb-6 space-y-2">
               <a href="#servicios" onClick={() => setIsOpen(false)} className="block px-3 py-2 text-base font-medium text-slate-600 hover:text-primary">Servicios</a>
-              <a href="#historia" onClick={() => setIsOpen(false)} className="block px-3 py-2 text-base font-medium text-slate-600 hover:text-primary">Historia</a>
+              <a href="#beneficios" onClick={() => setIsOpen(false)} className="block px-3 py-2 text-base font-medium text-slate-600 hover:text-primary">Beneficios</a>
+              <a href="#capturas" onClick={() => setIsOpen(false)} className="block px-3 py-2 text-base font-medium text-slate-600 hover:text-primary">Capturas</a>
               <a href="#contacto" onClick={() => setIsOpen(false)} className="block px-3 py-2 text-base font-medium text-primary font-bold">Contactar</a>
             </div>
           </motion.div>
@@ -660,7 +662,7 @@ const Benefits = () => {
   ];
 
   return (
-    <section className="py-24 bg-white">
+    <section className="py-24 bg-white" id='beneficios'>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="section-title">Soluciones para el <span className="text-primary">Día a Día</span></h2>
