@@ -216,6 +216,138 @@ const Services = () => (
   </section>
 );
 
+const AutoWorth = () => (
+  <section className="py-24 bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white overflow-hidden relative">
+    {/* Glowing background highlights */}
+    <div className="absolute top-0 right-0 w-96 h-96 bg-primary/10 rounded-full blur-3xl -z-10" />
+    <div className="absolute bottom-0 left-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl -z-10" />
+
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="grid lg:grid-cols-12 gap-16 items-center">
+        {/* Text column */}
+        <div className="lg:col-span-7 space-y-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+            className="space-y-6"
+          >
+            <div className="inline-flex items-center gap-2 py-1.5 px-4 rounded-full bg-primary/10 border border-primary/20 text-primary text-xs font-bold uppercase tracking-wider">
+              <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
+              ¡Ya disponible!
+            </div>
+            
+            <h2 className="text-4xl md:text-5xl font-extrabold tracking-tight leading-tight">
+              AutoWorth <br />
+              <span className="text-primary bg-gradient-to-r from-primary to-primary-light bg-clip-text text-transparent">
+                Precios al Instante
+              </span>
+            </h2>
+
+            <p className="text-lg text-slate-300 leading-relaxed">
+              Te presentamos la nueva aplicación web para consultar la cotización y precios de todos los vehículos de Argentina. Accedé de manera inmediata y simple a toda la información del mercado automotriz.
+            </p>
+
+            <div className="grid sm:grid-cols-2 gap-4 pt-2">
+              <div className="flex items-start gap-3">
+                <div className="w-6 h-6 rounded-lg bg-primary/20 flex items-center justify-center text-primary shrink-0 mt-0.5">
+                  <CheckCircle2 className="w-4 h-4" />
+                </div>
+                <div>
+                  <h4 className="font-semibold text-slate-200">100% Digital</h4>
+                  <p className="text-sm text-slate-400">Olvidate de andar consultando en la revista de papel.</p>
+                </div>
+              </div>
+
+              <div className="flex items-start gap-3">
+                <div className="w-6 h-6 rounded-lg bg-primary/20 flex items-center justify-center text-primary shrink-0 mt-0.5">
+                  <CheckCircle2 className="w-4 h-4" />
+                </div>
+                <div>
+                  <h4 className="font-semibold text-slate-200">Todo en 2 Clics</h4>
+                  <p className="text-sm text-slate-400">Consulta rápida y directa sin complicaciones desde cualquier dispositivo.</p>
+                </div>
+              </div>
+
+              <div className="flex items-start gap-3">
+                <div className="w-6 h-6 rounded-lg bg-primary/20 flex items-center justify-center text-primary shrink-0 mt-0.5">
+                  <CheckCircle2 className="w-4 h-4" />
+                </div>
+                <div>
+                  <h4 className="font-semibold text-slate-200">Multiplataforma</h4>
+                  <p className="text-sm text-slate-400">Diseñado para celular, tablet o computadora.</p>
+                </div>
+              </div>
+
+              <div className="flex items-start gap-3">
+                <div className="w-6 h-6 rounded-lg bg-primary/20 flex items-center justify-center text-primary shrink-0 mt-0.5">
+                  <CheckCircle2 className="w-4 h-4" />
+                </div>
+                <div>
+                  <h4 className="font-semibold text-slate-200">Siempre Actualizado</h4>
+                  <p className="text-sm text-slate-400">Datos reales y vigentes del mercado automotor nacional.</p>
+                </div>
+              </div>
+            </div>
+
+            <div className="flex flex-col sm:flex-row gap-4 pt-4">
+              <a 
+                href="https://autoworth.com.ar" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="btn-primary flex items-center justify-center gap-2 group text-center"
+              >
+                Ver más 
+                <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+              </a>
+              
+              <a 
+                href="https://wa.me/5492284530866?text=Hola!%20Me%20gustar%C3%ADa%20solicitar%20acceso%20a%20AutoWorth." 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="bg-slate-800 hover:bg-slate-700 border border-slate-700 text-white font-semibold py-3 px-6 rounded-xl transition-all duration-200 flex items-center justify-center gap-2 text-center hover:border-primary/50"
+              >
+                <MessageSquare className="w-4 h-4 text-primary" />
+                Solicitar acceso
+              </a>
+            </div>
+          </motion.div>
+        </div>
+
+        {/* Mockup Column */}
+        <div className="lg:col-span-5 relative flex justify-center">
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95, y: 30 }}
+            whileInView={{ opacity: 1, scale: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="relative w-full max-w-[320px] aspect-[9/18.5] rounded-[48px] bg-slate-950 p-3 shadow-[0_0_50px_rgba(220,172,12,0.25)] border-4 border-slate-800 ring-1 ring-white/10 overflow-hidden flex flex-col"
+          >
+            {/* Camera notch / Speaker */}
+            <div className="absolute top-4 left-1/2 -translate-x-1/2 w-28 h-4 bg-slate-950 rounded-b-2xl z-20 flex items-center justify-center">
+              <div className="w-8 h-1 bg-slate-800 rounded-full" />
+            </div>
+
+            {/* Home indicator bar at bottom */}
+            <div className="absolute bottom-1.5 left-1/2 -translate-x-1/2 w-24 h-1.5 bg-slate-800 rounded-full z-20" />
+
+            {/* Screen Content */}
+            <div className="w-full h-full rounded-[38px] overflow-hidden bg-white relative">
+              <img 
+                src="/autoworth-mockup.png" 
+                alt="AutoWorth App - Consulta de precios de vehículos en Argentina" 
+                className="w-full h-full object-cover object-top"
+                loading="lazy"
+              />
+            </div>
+          </motion.div>
+        </div>
+      </div>
+    </div>
+  </section>
+);
+
 const History = () => (
   <section id="historia" className="py-24 overflow-hidden">
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -577,6 +709,7 @@ export default function App() {
       <main>
         <Hero />
         <Services />
+        <AutoWorth />
         <Benefits />
         <Showcase />
         <History />
