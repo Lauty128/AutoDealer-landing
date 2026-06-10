@@ -1,15 +1,15 @@
 import React, { useState } from 'react';
-import { 
-  LayoutDashboard, 
-  Database, 
-  Zap, 
-  Users, 
-  Car, 
-  TrendingUp, 
-  CheckCircle2, 
-  ArrowRight, 
-  Mail, 
-  Phone, 
+import {
+  LayoutDashboard,
+  Database,
+  Zap,
+  Users,
+  Car,
+  TrendingUp,
+  CheckCircle2,
+  ArrowRight,
+  Mail,
+  Phone,
   MapPin,
   MessageSquare,
   ChevronRight,
@@ -21,12 +21,12 @@ import { Showcase } from './Showcase';
 
 // Interfaces
 interface ServiceCardIterface {
-  icon: any, 
-  title: string 
-  subtitle: string 
+  icon: any,
+  title: string
+  subtitle: string
   features: string[]
   price: string
-  type: string 
+  type: string
   dark?: boolean
 }
 
@@ -38,9 +38,9 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-20 items-center">
           <div className="flex items-center gap-2">
-            <img src="/landing/logo-h.png" alt="AutoDealer - Sistema de gestión para concesionarios de vehículos" width={170} />
+            <img src="/logo-h.png" alt="AutoDealer - Sistema de gestión para concesionarios de vehículos" width={170} />
           </div>
-          
+
           <div className="hidden md:flex items-center gap-8">
             <a href="#servicios" className="text-sm font-medium text-slate-600 hover:text-primary transition-colors">Servicios</a>
             <a href="#historia" className="text-sm font-medium text-slate-600 hover:text-primary transition-colors">Historia</a>
@@ -57,7 +57,7 @@ const Navbar = () => {
 
       <AnimatePresence>
         {isOpen && (
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
@@ -81,7 +81,7 @@ const Hero = () => (
       <div className="absolute top-20 left-10 w-72 h-72 bg-primary rounded-full blur-3xl" />
       <div className="absolute bottom-20 right-10 w-96 h-96 bg-primary rounded-full blur-3xl" />
     </div>
-    
+
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
@@ -95,7 +95,7 @@ const Hero = () => (
           Potenciamos tu <span className="text-primary">Concesionario</span>
         </h1>
         <p className="text-xl text-slate-600 max-w-3xl mx-auto mb-10 leading-relaxed">
-          Soluciones inteligentes para la gestión operativa, promoción de marca y asistencia al cliente. 
+          Soluciones inteligentes para la gestión operativa, promoción de marca y asistencia al cliente.
           Desde sistemas SaaS ágiles hasta ERPs dedicados a medida.
         </p>
         <div className="flex flex-col sm:flex-row justify-center gap-4">
@@ -112,7 +112,7 @@ const Hero = () => (
 );
 
 const ServiceCard = ({ icon: Icon, title, subtitle, features, price, type, dark = false }: ServiceCardIterface) => (
-  <motion.div 
+  <motion.div
     whileHover={{ y: -10 }}
     className={`p-8 rounded-3xl border ${dark ? 'bg-slate-900 text-white border-slate-800' : 'bg-white text-slate-900 border-slate-200'} shadow-xl relative overflow-hidden flex flex-col h-full`}
   >
@@ -126,7 +126,7 @@ const ServiceCard = ({ icon: Icon, title, subtitle, features, price, type, dark 
     </div>
     <h3 className="text-2xl font-bold mb-2">{title}</h3>
     <p className={`text-sm mb-8 ${dark ? 'text-slate-400' : 'text-slate-500'}`}>{subtitle}</p>
-    
+
     <ul className="space-y-4 mb-10">
       {features.map((feature, i) => (
         <li key={i} className="flex items-start gap-3 text-sm">
@@ -135,7 +135,7 @@ const ServiceCard = ({ icon: Icon, title, subtitle, features, price, type, dark 
         </li>
       ))}
     </ul>
-    
+
     <div className="mt-auto pt-6 border-t border-slate-100/10">
       <div className="text-xs uppercase tracking-widest text-primary font-bold mb-1">Inversión</div>
       <div className="text-3xl font-bold">{price}</div>
@@ -157,7 +157,7 @@ const Services = () => (
       </div>
 
       <div className="grid md:grid-cols-2 gap-8 mb-16">
-        <ServiceCard 
+        <ServiceCard
           icon={LayoutDashboard}
           type="SaaS"
           title="AutoDealer SaaS"
@@ -172,7 +172,7 @@ const Services = () => (
           ]}
           price="Abono Mensual"
         />
-        <ServiceCard 
+        <ServiceCard
           icon={Database}
           type="ERP"
           title="AutoDealer Dedicado"
@@ -195,7 +195,7 @@ const Services = () => (
         />
       </div>
 
-      <motion.div 
+      <motion.div
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         className="bg-white p-8 rounded-3xl border border-slate-200 flex flex-col md:flex-row items-center gap-8 shadow-sm"
@@ -206,7 +206,7 @@ const Services = () => (
         <div className="flex-1 text-center md:text-left">
           <h4 className="text-xl font-bold text-slate-900 mb-2">¿Necesitas algo más específico?</h4>
           <p className="text-slate-600">
-            No nos limitamos a nuestros sistemas estándar. Desarrollamos automatizaciones y operaciones especializadas 
+            No nos limitamos a nuestros sistemas estándar. Desarrollamos automatizaciones y operaciones especializadas
             para resolver tareas diarias tediosas de tu concesionario.
           </p>
         </div>
@@ -237,7 +237,7 @@ const AutoWorth = () => (
               <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
               ¡Ya disponible!
             </div>
-            
+
             <h2 className="text-4xl md:text-5xl font-extrabold tracking-tight leading-tight">
               AutoWorth <br />
               <span className="text-primary bg-gradient-to-r from-primary to-primary-light bg-clip-text text-transparent">
@@ -292,20 +292,20 @@ const AutoWorth = () => (
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4 pt-4">
-              <a 
-                href="https://autoworth.com.ar" 
-                target="_blank" 
-                rel="noopener noreferrer" 
+              <a
+                href="https://autoworth.com.ar"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="btn-primary flex items-center justify-center gap-2 group text-center"
               >
-                Ver más 
+                Ver más
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </a>
-              
-              <a 
-                href="https://wa.me/5492284530866?text=Hola!%20Me%20gustar%C3%ADa%20solicitar%20acceso%20a%20AutoWorth." 
-                target="_blank" 
-                rel="noopener noreferrer" 
+
+              <a
+                href="https://wa.me/5492284530866?text=Hola!%20Me%20gustar%C3%ADa%20solicitar%20acceso%20a%20AutoWorth."
+                target="_blank"
+                rel="noopener noreferrer"
                 className="bg-slate-800 hover:bg-slate-700 border border-slate-700 text-white font-semibold py-3 px-6 rounded-xl transition-all duration-200 flex items-center justify-center gap-2 text-center hover:border-primary/50"
               >
                 <MessageSquare className="w-4 h-4 text-primary" />
@@ -334,9 +334,9 @@ const AutoWorth = () => (
 
             {/* Screen Content */}
             <div className="w-full h-full rounded-[38px] overflow-hidden bg-white relative">
-              <img 
-                src="/autoworth-mockup.png" 
-                alt="AutoWorth App - Consulta de precios de vehículos en Argentina" 
+              <img
+                src="/autoworth-mockup.png"
+                alt="AutoWorth App - Consulta de precios de vehículos en Argentina"
                 className="w-full h-full object-cover object-top"
                 loading="lazy"
               />
@@ -354,9 +354,9 @@ const History = () => (
       <div className="grid lg:grid-cols-2 gap-16 items-center">
         <div className="relative">
           <div className="aspect-square rounded-3xl bg-slate-100 overflow-hidden shadow-2xl">
-            <img 
-              src="https://picsum.photos/seed/autodealer-office/800/800" 
-              alt="Oficinas de AutoDealer - Software de gestión integral para concesionarios en Argentina" 
+            <img
+              src="https://picsum.photos/seed/autodealer-office/800/800"
+              alt="Oficinas de AutoDealer - Software de gestión integral para concesionarios en Argentina"
               className="w-full h-full object-cover opacity-80"
               referrerPolicy="no-referrer"
             />
@@ -367,26 +367,26 @@ const History = () => (
             </p>
           </div>
         </div>
-        
+
         <div>
           <h2 className="section-title text-left">Nuestra Historia</h2>
           <div className="space-y-6 text-slate-600 leading-relaxed">
             <p>
-              AutoDealer comenzó como un sueño ambicioso en un mercado saturado de procesos manuales y herramientas obsoletas. 
-              La lucha por llevar este proyecto a cabo fue intensa, enfrentando desafíos tecnológicos y de mercado, 
+              AutoDealer comenzó como un sueño ambicioso en un mercado saturado de procesos manuales y herramientas obsoletas.
+              La lucha por llevar este proyecto a cabo fue intensa, enfrentando desafíos tecnológicos y de mercado,
               pero siempre con la visión clara de simplificar la vida del concesionario.
             </p>
             <p>
-              Desde las primeras líneas de código hasta convertirnos en un aliado estratégico para decenas de agencias, 
-              nuestro compromiso ha sido la innovación constante. Entendemos que un coche no es solo un producto, 
+              Desde las primeras líneas de código hasta convertirnos en un aliado estratégico para decenas de agencias,
+              nuestro compromiso ha sido la innovación constante. Entendemos que un coche no es solo un producto,
               es una inversión y un sueño para el cliente, y la gestión detrás de esa venta debe ser impecable.
             </p>
-            
+
             <div className="pt-8 border-t border-slate-100 flex items-center gap-4">
               <div className="w-16 h-16 rounded-full bg-slate-200 overflow-hidden">
-                <img 
-                  src="/img/me.jpeg" 
-                  alt="Lautaro Silverii - CEO y Fundador de AutoDealer, sistema de gestión automotriz" 
+                <img
+                  src="/img/me.jpeg"
+                  alt="Lautaro Silverii - CEO y Fundador de AutoDealer, sistema de gestión automotriz"
                   className="w-full h-full object-cover"
                   referrerPolicy="no-referrer"
                 />
@@ -459,10 +459,10 @@ const Contact = () => {
           <div>
             <h2 className="text-4xl font-bold mb-6">Hablemos de tu próximo <span className="text-primary">gran paso</span></h2>
             <p className="text-slate-400 text-lg mb-12">
-              Estamos listos para ayudarte a optimizar tu concesionario. 
+              Estamos listos para ayudarte a optimizar tu concesionario.
               Completa el formulario y un especialista se pondrá en contacto contigo.
             </p>
-            
+
             <div className="space-y-8">
               <div className="flex items-center gap-4">
                 <div className="w-12 h-12 rounded-xl bg-primary/20 flex items-center justify-center text-primary">
@@ -499,58 +499,58 @@ const Contact = () => {
               <div className="grid md:grid-cols-2 gap-6">
                 <div className="space-y-2">
                   <label className="text-sm font-bold text-slate-700">Nombre Completo *</label>
-                  <input 
-                    type="text" 
+                  <input
+                    type="text"
                     required
                     value={formData.nombre}
                     className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all"
                     placeholder="Ej: Juan Pérez"
-                    onChange={(e) => setFormData({...formData, nombre: e.target.value})}
+                    onChange={(e) => setFormData({ ...formData, nombre: e.target.value })}
                   />
                 </div>
 
                 <div className="space-y-2">
                   <label className="text-sm font-bold text-slate-700">Telefono de contacto *</label>
-                  <input 
-                    type="text" 
+                  <input
+                    type="text"
                     required
                     value={formData.telefono}
                     className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all"
                     placeholder="Ej: 2284 000000"
-                    onChange={(e) => setFormData({...formData, telefono: e.target.value})}
+                    onChange={(e) => setFormData({ ...formData, telefono: e.target.value })}
                   />
                 </div>
               </div>
 
               <div className="space-y-2">
-                  <label className="text-sm font-bold text-slate-700">Email *</label>
-                  <input 
-                    type="email" 
-                    required
-                    value={formData.email}
-                    className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all"
-                    placeholder="juan@concesionario.com"
-                    onChange={(e) => setFormData({...formData, email: e.target.value})}
-                  />
+                <label className="text-sm font-bold text-slate-700">Email *</label>
+                <input
+                  type="email"
+                  required
+                  value={formData.email}
+                  className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all"
+                  placeholder="juan@concesionario.com"
+                  onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                />
               </div>
-              
+
               <div className="space-y-2">
                 <label className="text-sm font-bold text-slate-700">Nombre del Concesionario</label>
-                <input 
-                  type="text" 
+                <input
+                  type="text"
                   value={formData.concesionario}
                   className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all"
                   placeholder="Ej: Automotores Centro"
-                  onChange={(e) => setFormData({...formData, concesionario: e.target.value})}
+                  onChange={(e) => setFormData({ ...formData, concesionario: e.target.value })}
                 />
               </div>
 
               <div className="space-y-2">
                 <label className="text-sm font-bold text-slate-700">Motivo de Contacto</label>
-                <select 
+                <select
                   value={formData.asunto}
                   className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all bg-white"
-                  onChange={(e) => setFormData({...formData, asunto: e.target.value})}
+                  onChange={(e) => setFormData({ ...formData, asunto: e.target.value })}
                 >
                   <option value="consulta">Consultar sobre el sistema</option>
                   <option value="contratar">Contratar servicio</option>
@@ -561,30 +561,29 @@ const Contact = () => {
 
               <div className="space-y-2">
                 <label className="text-sm font-bold text-slate-700">Mensaje</label>
-                <textarea 
+                <textarea
                   rows={4}
                   value={formData.mensaje}
                   className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all resize-none"
                   placeholder="Cuéntanos un poco más sobre tu necesidad..."
-                  onChange={(e) => setFormData({...formData, mensaje: e.target.value})}
+                  onChange={(e) => setFormData({ ...formData, mensaje: e.target.value })}
                 ></textarea>
               </div>
 
               {status.type && (
-                <motion.div 
+                <motion.div
                   initial={{ opacity: 0, y: -10 }}
                   animate={{ opacity: 1, y: 0 }}
-                  className={`p-4 rounded-xl text-sm font-medium ${
-                    status.type === 'success' ? 'bg-emerald-50 text-emerald-700 border border-emerald-100' : 'bg-red-50 text-red-700 border border-red-100'
-                  }`}
+                  className={`p-4 rounded-xl text-sm font-medium ${status.type === 'success' ? 'bg-emerald-50 text-emerald-700 border border-emerald-100' : 'bg-red-50 text-red-700 border border-red-100'
+                    }`}
                 >
                   {status.message}
                 </motion.div>
               )}
 
-              <button 
-                type="submit" 
-                id='submitButton' 
+              <button
+                type="submit"
+                id='submitButton'
                 disabled={isSubmitting}
                 className={`btn-primary w-full flex items-center justify-center gap-2 ${isSubmitting ? 'opacity-70 cursor-not-allowed' : ''}`}
               >
@@ -602,14 +601,14 @@ const Footer = () => (
   <footer className="py-12 border-t border-slate-100" role="contentinfo">
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div className="flex flex-col md:flex-row justify-between items-center gap-8">
-        <img src="/landing/logo.png" width={100} alt="AutoDealer - Gestión inteligente para concesionarios" />
-        
+        <img src="/logo.png" width={100} alt="AutoDealer - Gestión inteligente para concesionarios" />
+
         <div className="text-slate-500 text-sm flex flex-col md:flex-row items-center gap-4">
           <span>© {new Date().getFullYear()} AutoDealer. Todos los derechos reservados.</span>
           <span className="hidden md:inline text-slate-200">|</span>
           <a href="/politicas-de-privacidad" className="text-slate-600 hover:text-primary transition-colors font-medium">Políticas de Privacidad</a>
         </div>
-        
+
         <div className="flex gap-6">
           <a href="#" className="text-slate-400 hover:text-primary transition-colors" aria-label="Tendencias de AutoDealer" rel="noopener noreferrer"><TrendingUp className="w-5 h-5" /></a>
           <a href="#" className="text-slate-400 hover:text-primary transition-colors" aria-label="Mensajes y soporte de AutoDealer" rel="noopener noreferrer"><MessageSquare className="w-5 h-5" /></a>
@@ -672,7 +671,7 @@ const Benefits = () => {
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {items.map((item, index) => (
-            <motion.div 
+            <motion.div
               key={index}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -683,7 +682,7 @@ const Benefits = () => {
                 <item.icon className="w-6 h-6 text-primary group-hover:text-white" />
               </div>
               <h3 className="text-xl font-bold text-slate-900 mb-4">{item.title}</h3>
-              
+
               <div className="space-y-4">
                 <div>
                   <p className="text-[10px] font-bold uppercase tracking-widest text-red-500 mb-1">El Problema</p>
