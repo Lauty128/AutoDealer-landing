@@ -34,11 +34,11 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="fixed w-full z-50 bg-white/90 backdrop-blur-md border-b border-slate-100">
+    <nav className="fixed w-full z-50 bg-white/90 backdrop-blur-md border-b border-slate-100" aria-label="Navegación principal">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-20 items-center">
           <div className="flex items-center gap-2">
-            <img src="/landing/logo-h.png" alt="Logo AutoDealer" width={170} />
+            <img src="/landing/logo-h.png" alt="AutoDealer - Sistema de gestión para concesionarios de vehículos" width={170} />
           </div>
           
           <div className="hidden md:flex items-center gap-8">
@@ -48,7 +48,7 @@ const Navbar = () => {
           </div>
 
           <div className="md:hidden">
-            <button onClick={() => setIsOpen(!isOpen)} className="p-2 text-slate-600">
+            <button onClick={() => setIsOpen(!isOpen)} className="p-2 text-slate-600" aria-label={isOpen ? 'Cerrar menú de navegación' : 'Abrir menú de navegación'}>
               {isOpen ? <X /> : <Menu />}
             </button>
           </div>
@@ -224,7 +224,7 @@ const History = () => (
           <div className="aspect-square rounded-3xl bg-slate-100 overflow-hidden shadow-2xl">
             <img 
               src="https://picsum.photos/seed/autodealer-office/800/800" 
-              alt="AutoDealer History" 
+              alt="Oficinas de AutoDealer - Software de gestión integral para concesionarios en Argentina" 
               className="w-full h-full object-cover opacity-80"
               referrerPolicy="no-referrer"
             />
@@ -254,7 +254,7 @@ const History = () => (
               <div className="w-16 h-16 rounded-full bg-slate-200 overflow-hidden">
                 <img 
                   src="/img/me.jpeg" 
-                  alt="Lautaro Silverii" 
+                  alt="Lautaro Silverii - CEO y Fundador de AutoDealer, sistema de gestión automotriz" 
                   className="w-full h-full object-cover"
                   referrerPolicy="no-referrer"
                 />
@@ -467,19 +467,19 @@ const Contact = () => {
 };
 
 const Footer = () => (
-  <footer className="py-12 border-t border-slate-100">
+  <footer className="py-12 border-t border-slate-100" role="contentinfo">
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div className="flex flex-col md:flex-row justify-between items-center gap-8">
-        <img src="/landing/logo.png" width={100} alt="" />
+        <img src="/landing/logo.png" width={100} alt="AutoDealer - Gestión inteligente para concesionarios" />
         
         <div className="text-slate-500 text-sm">
           © {new Date().getFullYear()} AutoDealer. Todos los derechos reservados.
         </div>
         
         <div className="flex gap-6">
-          <a href="#" className="text-slate-400 hover:text-primary transition-colors"><TrendingUp className="w-5 h-5" /></a>
-          <a href="#" className="text-slate-400 hover:text-primary transition-colors"><MessageSquare className="w-5 h-5" /></a>
-          <a href="#" className="text-slate-400 hover:text-primary transition-colors"><Users className="w-5 h-5" /></a>
+          <a href="#" className="text-slate-400 hover:text-primary transition-colors" aria-label="Tendencias de AutoDealer" rel="noopener noreferrer"><TrendingUp className="w-5 h-5" /></a>
+          <a href="#" className="text-slate-400 hover:text-primary transition-colors" aria-label="Mensajes y soporte de AutoDealer" rel="noopener noreferrer"><MessageSquare className="w-5 h-5" /></a>
+          <a href="#" className="text-slate-400 hover:text-primary transition-colors" aria-label="Comunidad de usuarios de AutoDealer" rel="noopener noreferrer"><Users className="w-5 h-5" /></a>
         </div>
       </div>
     </div>
