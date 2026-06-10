@@ -335,7 +335,7 @@ const AutoWorth = () => (
             {/* Screen Content */}
             <div className="w-full h-full rounded-[38px] overflow-hidden bg-white relative">
               <img
-                src="/autoworth-mockup.png"
+                src="/img/autoworth-mockup.png"
                 alt="AutoWorth App - Consulta de precios de vehículos en Argentina"
                 className="w-full h-full object-cover object-top"
                 loading="lazy"
@@ -385,7 +385,7 @@ const History = () => (
             <div className="pt-8 border-t border-slate-100 flex items-center gap-4">
               <div className="w-16 h-16 rounded-full bg-slate-200 overflow-hidden">
                 <img
-                  src="/img/me.jpeg"
+                  src="/img/me.jpg"
                   alt="Lautaro Silverii - CEO y Fundador de AutoDealer, sistema de gestión automotriz"
                   className="w-full h-full object-cover"
                   referrerPolicy="no-referrer"
