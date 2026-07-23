@@ -18,6 +18,7 @@ import {
 } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 import { Showcase } from './Showcase';
+import { VideoShowcase } from './VideoShowcase';
 
 // Interfaces
 interface ServiceCardIterface {
@@ -45,6 +46,7 @@ const Navbar = () => {
             <a href="#servicios" className="text-sm font-medium text-slate-600 hover:text-primary transition-colors">Servicios</a>
             <a href="#beneficios" className="text-sm font-medium text-slate-600 hover:text-primary transition-colors">Beneficios</a>
             <a href="#capturas" className="text-sm font-medium text-slate-600 hover:text-primary transition-colors">Capturas</a>
+            <a href="#demos" className="text-sm font-medium text-slate-600 hover:text-primary transition-colors">Demos</a>
             <a href="#contacto" className="btn-primary !py-2 !px-5 text-sm">Contactar</a>
           </div>
 
@@ -68,6 +70,7 @@ const Navbar = () => {
               <a href="#servicios" onClick={() => setIsOpen(false)} className="block px-3 py-2 text-base font-medium text-slate-600 hover:text-primary">Servicios</a>
               <a href="#beneficios" onClick={() => setIsOpen(false)} className="block px-3 py-2 text-base font-medium text-slate-600 hover:text-primary">Beneficios</a>
               <a href="#capturas" onClick={() => setIsOpen(false)} className="block px-3 py-2 text-base font-medium text-slate-600 hover:text-primary">Capturas</a>
+              <a href="#demos" onClick={() => setIsOpen(false)} className="block px-3 py-2 text-base font-medium text-slate-600 hover:text-primary">Demos</a>
               <a href="#contacto" onClick={() => setIsOpen(false)} className="block px-3 py-2 text-base font-medium text-primary font-bold">Contactar</a>
             </div>
           </motion.div>
@@ -713,6 +716,7 @@ export default function App() {
         <AutoWorth />
         <Benefits />
         <Showcase />
+        <VideoShowcase />
         <History />
         <Contact />
       </main>
