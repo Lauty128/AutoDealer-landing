@@ -45,7 +45,7 @@ const Navbar = () => {
           <div className="hidden md:flex items-center gap-8">
             <a href="#servicios" className="text-sm font-medium text-slate-600 hover:text-primary transition-colors">Servicios</a>
             <a href="#beneficios" className="text-sm font-medium text-slate-600 hover:text-primary transition-colors">Beneficios</a>
-            <a href="#capturas" className="text-sm font-medium text-slate-600 hover:text-primary transition-colors">Capturas</a>
+            {/* <a href="#capturas" className="text-sm font-medium text-slate-600 hover:text-primary transition-colors">Capturas</a> */}
             <a href="#demos" className="text-sm font-medium text-slate-600 hover:text-primary transition-colors">Demos</a>
             <a href="#contacto" className="btn-primary !py-2 !px-5 text-sm">Contactar</a>
           </div>
@@ -69,7 +69,7 @@ const Navbar = () => {
             <div className="px-4 pt-2 pb-6 space-y-2">
               <a href="#servicios" onClick={() => setIsOpen(false)} className="block px-3 py-2 text-base font-medium text-slate-600 hover:text-primary">Servicios</a>
               <a href="#beneficios" onClick={() => setIsOpen(false)} className="block px-3 py-2 text-base font-medium text-slate-600 hover:text-primary">Beneficios</a>
-              <a href="#capturas" onClick={() => setIsOpen(false)} className="block px-3 py-2 text-base font-medium text-slate-600 hover:text-primary">Capturas</a>
+              {/* <a href="#capturas" onClick={() => setIsOpen(false)} className="block px-3 py-2 text-base font-medium text-slate-600 hover:text-primary">Capturas</a> */}
               <a href="#demos" onClick={() => setIsOpen(false)} className="block px-3 py-2 text-base font-medium text-slate-600 hover:text-primary">Demos</a>
               <a href="#contacto" onClick={() => setIsOpen(false)} className="block px-3 py-2 text-base font-medium text-primary font-bold">Contactar</a>
             </div>
@@ -308,7 +308,7 @@ const AutoWorth = () => (
               </a>
 
               <a
-                href="https://wa.me/5492284530866?text=Hola!%20Me%20gustar%C3%ADa%20solicitar%20acceso%20a%20AutoWorth."
+                href="https://wa.me/5492284552868?text=Hola!%20Me%20gustar%C3%ADa%20solicitar%20acceso%20a%20AutoWorth."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-slate-800 hover:bg-slate-700 border border-slate-700 text-white font-semibold py-3 px-6 rounded-xl transition-all duration-200 flex items-center justify-center gap-2 text-center hover:border-primary/50"
@@ -484,7 +484,7 @@ const Contact = () => {
                 </div>
                 <div>
                   <p className="text-xs text-slate-500 uppercase tracking-widest font-bold">WhatsApp</p>
-                  <p className="text-lg">+54 2284-530866</p>
+                  <p className="text-lg">+54 2284-552868</p>
                 </div>
               </div>
               <div className="flex items-center gap-4">
@@ -715,7 +715,7 @@ export default function App() {
         <Services />
         <AutoWorth />
         <Benefits />
-        <Showcase />
+        {/* <Showcase /> */}
         <VideoShowcase />
         <History />
         <Contact />

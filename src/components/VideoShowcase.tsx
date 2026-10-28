@@ -1,15 +1,14 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import {
+  Car,
   CircleDollarSign,
-  Database,
+  Users,
   Wallet,
+  BarChart3,
   Play,
   CheckCircle2,
-  Tv,
-  Sliders,
-  Car,
-  FileText
+  Tv
 } from 'lucide-react';
 
 interface VideoModule {
@@ -50,60 +49,78 @@ const parseTimeToSeconds = (time: string | number | undefined): number => {
 
 const videoModules: VideoModule[] = [
   {
-    id: 'parameters',
-    title: 'Parámetros del Sistema',
-    tagline: 'Configuración y personalización',
-    description: 'Configurá de manera simple los conceptos de movimientos de caja, definí los tipos de vehículos que comercializás y creá plantillas precargadas por cada tipo para agilizar la posterior carga del stock.',
-    youtubeId: 'ZnL6PuqjPyA', // Placeholder ID - user can customize
+    id: 'usados-0km',
+    title: 'Usados y Unidades 0KM',
+    tagline: 'Inventario y señas anticipadas',
+    description: 'Administrá tu inventario completo diferenciando vehículos usados y 0KM por estados y colores. Registrá señas y reservas para unidades 0KM antes de que ingresen físicamente a la agencia.',
+    youtubeId: 'GsbbEaIvDRI',
     startTime: 0,
-    icon: Sliders,
-    features: [
-      'Definición de conceptos para ingresos y egresos de caja',
-      'Configuración de tipos de vehículos a medida',
-      'Carga rápida mediante plantillas técnicas precargadas'
-    ]
-  },
-  {
-    id: 'add-vehicles',
-    title: 'Agregar Vehículos y Catálogo',
-    tagline: 'Control de stock y visualización pública',
-    description: 'Cargá y administrá tu inventario detalladamente para que esté disponible para gestión interna y visible al instante en el catálogo digital. Conocé cómo lo visualizan los clientes y las operaciones que pueden realizar.',
-    youtubeId: 'qKTFWnD5ZTk', // Placeholder ID - user can customize
-    startTime: '1:06',
     icon: Car,
     features: [
-      'Carga detallada del stock físico en simples pasos',
-      'Sincronización instantánea con el catálogo público online',
-      'Vista del cliente y simulación de operaciones directamente en la web'
+      'Segmentación visual de stock por estados y colores',
+      'Registro y gestión de señas para unidades 0KM en tránsito',
+      'Ficha técnica detallada con trazabilidad completa de cada unidad',
+      'Filtros dinámicos por disponibilidad, marca, modelo y año'
     ]
   },
   {
-    id: 'consignment',
-    title: 'Contratos de Consignación',
-    tagline: 'Documentación y exhibición',
-    description: 'Generá contratos de consignación profesionales listos para imprimir para aquellos vehículos tomados de terceros, configurando simultáneamente la unidad para su correcta publicación y promoción en tu catálogo.',
-    youtubeId: 'sFhAU_Gl8pg', // Placeholder ID - user can customize
-    startTime: '0:13',
-    icon: FileText,
-    features: [
-      'Armado y emisión del contrato de consignación oficial',
-      'Configuración especial de la unidad para el catálogo digital',
-      'Control de firmas, estados y documentación asociada'
-    ]
-  },
-  {
-    id: 'sales',
-    title: 'Módulo de Ventas',
-    tagline: 'Ventas con permutas y financiación',
-    description: 'Gestioná el ciclo de ventas completo de tu concesionaria. Registrá permutas tomando vehículos usados como parte de pago, configurá planes de financiación a medida, asociá clientes y generá boletos de compra-venta de forma guiada.',
-    youtubeId: '-bVqQIG4EbQ', // ID de YouTube
-    startTime: '0:56', // Tiempo de inicio exacto
+    id: 'ventas-financiacion',
+    title: 'Ventas y Financiaciones',
+    tagline: 'Operaciones comerciales y cuotas',
+    description: 'Registrá ventas de usados y 0KM combinando múltiples medios de pago. Configurá planes de financiación a medida bajo el sistema francés con cálculo automático de cuotas e intereses.',
+    youtubeId: 'iF5z2xhIL6w',
+    startTime: 0,
     icon: CircleDollarSign,
     features: [
-      'Carga guiada paso a paso de la operación',
-      'Soporte multi-moneda (pesos y dólares)',
-      'Registro automático de unidades tomadas en parte de pago',
-      'Cálculo de comisiones y saldo neto a financiar'
+      'Carga ágil de operaciones de venta para usados y 0KM',
+      'Combinación flexible de múltiples medios de pago',
+      'Simulación y cálculo de financiación con sistema francés',
+      'Generación automática de contratos y boletos de compra-venta'
+    ]
+  },
+  {
+    id: 'clientes-cuentas-corrientes',
+    title: 'Clientes y Cuentas Corrientes',
+    tagline: 'Historial, deudas y portal web',
+    description: 'Mantené el seguimiento integral de cada cliente, su historial de operaciones y el estado de su cuenta corriente. Brindales un portal web exclusivo para consultar cuotas y notificar pagos.',
+    youtubeId: 'g_1doaEnu4w',
+    startTime: 0,
+    icon: Users,
+    features: [
+      'Historial centralizado de compras y operaciones por cliente',
+      'Control riguroso de cuentas corrientes y alertas de vencimiento',
+      'Portal web de autogestión para consulta de cuotas online',
+      'Recepción y validación de avisos de transferencias bancarias'
+    ]
+  },
+  {
+    id: 'tesoreria-comprobantes',
+    title: 'Tesorería y Comprobantes',
+    tagline: 'Cajas múltiples y respaldo documental',
+    description: 'Gestioná cajas diarias y flujos de fondos con trazabilidad total. En AutoDealer todo movimiento queda respaldado por un comprobante oficial numerado para una administración transparente.',
+    youtubeId: 'R3gz6Wyn1WA',
+    startTime: 0,
+    icon: Wallet,
+    features: [
+      'Control de ingresos y egresos de caja en pesos y dólares',
+      'Emisión obligatoria de comprobante para cada movimiento',
+      'Auditoría continua de gastos operativos y caja chica',
+      'Arqueo de caja y cierres de turno transparentes e instantáneos'
+    ]
+  },
+  {
+    id: 'dashboard-estadisticas',
+    title: 'Dashboard y Estadísticas',
+    tagline: 'Métricas clave y toma de decisiones',
+    description: 'Accedé a estadísticas y reportes inteligentes en tiempo real sobre tu concesionario. Analizá volumen de ventas, facturación, rentabilidad y rotación de stock para tomar decisiones informadas.',
+    youtubeId: 'd72b2ku3Axw',
+    startTime: 0,
+    icon: BarChart3,
+    features: [
+      'Indicadores clave de rendimiento (KPIs) en tiempo real',
+      'Gráficos comparativos de facturación y evolución de ventas',
+      'Métricas de rentabilidad bruta y neta por operación',
+      'Análisis de rotación de unidades y rendimiento comercial'
     ]
   }
 ];
@@ -143,7 +160,7 @@ export const VideoShowcase = () => {
         {/* Dashboard Layout */}
         <div className="grid lg:grid-cols-12 gap-12 items-stretch">
           {/* Left Column: Interactive Cards Selector */}
-          <div className="lg:col-span-5 flex flex-col justify-center space-y-4">
+          <div className="lg:col-span-5 flex flex-col justify-center space-y-3">
             {videoModules.map((module, idx) => {
               const Icon = module.icon;
               const isSelected = activeTab === idx;
@@ -151,7 +168,7 @@ export const VideoShowcase = () => {
                 <button
                   key={module.id}
                   onClick={() => handleTabChange(idx)}
-                  className={`w-full text-left p-6 rounded-2xl transition-all duration-300 border flex items-start gap-4 relative overflow-hidden ${isSelected
+                  className={`w-full text-left p-4 sm:p-5 rounded-2xl transition-all duration-300 border flex items-start gap-4 relative overflow-hidden ${isSelected
                     ? 'bg-slate-800/80 border-primary shadow-[0_0_25px_rgba(220,172,12,0.15)] ring-1 ring-primary/30'
                     : 'bg-slate-900/40 border-slate-800 hover:bg-slate-800/35 hover:border-slate-700 text-slate-400'
                     }`}
@@ -164,9 +181,9 @@ export const VideoShowcase = () => {
                     />
                   )}
 
-                  <div className={`p-3 rounded-xl shrink-0 transition-colors duration-300 ${isSelected ? 'bg-primary text-slate-900' : 'bg-slate-800 text-slate-400'
+                  <div className={`p-2.5 sm:p-3 rounded-xl shrink-0 transition-colors duration-300 ${isSelected ? 'bg-primary text-slate-900' : 'bg-slate-800 text-slate-400'
                     }`}>
-                    <Icon className="w-6 h-6" />
+                    <Icon className="w-5 h-5 sm:w-6 sm:h-6" />
                   </div>
 
                   <div className="space-y-1">
