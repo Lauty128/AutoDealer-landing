@@ -35,6 +35,10 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site || 'https://autodeal
 					<div class="flex items-center gap-8">
 						<a href="/#servicios" class="text-sm font-medium text-slate-600 hover:text-primary transition-colors">Servicios</a>
 						<a href="/#historia" class="text-sm font-medium text-slate-600 hover:text-primary transition-colors">Historia</a>
+						<a href="/autofixer" class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-amber-500/10 text-amber-600 hover:bg-amber-500 hover:text-slate-950 transition-all text-xs font-bold uppercase tracking-wider border border-amber-500/20">
+							AutoFixer
+							<span class="bg-amber-500 text-slate-950 text-[9px] px-1.5 py-0.2 rounded-full font-black">NUEVO</span>
+						</a>
 						<a href="/#contacto" class="btn-primary !py-2 !px-5 text-sm">Contactar</a>
 					</div>
 				</div>
@@ -191,6 +195,8 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site || 'https://autodeal
 						<span>© {new Date().getFullYear()} AutoDealer. Todos los derechos reservados.</span>
 						<span class="hidden md:inline text-slate-300">|</span>
 						<a href="/politicas-de-privacidad" class="text-slate-600 hover:text-primary transition-colors font-medium">Políticas de Privacidad</a>
+						<span class="hidden md:inline text-slate-300">|</span>
+						<a href="/autofixer" class="text-amber-600 hover:text-amber-700 transition-colors font-semibold">AutoFixer para Talleres</a>
 					</div>
 				</div>
 			</div>

@@ -1,0 +1,73 @@
+---
+import AutoFixerPage from '../components/AutoFixerPage.tsx';
+import '../index.css';
+
+const title = "AutoFixer - Sistema de Gestión para Talleres Mecánicos y Detailing | AutoDealer";
+const description = "Software para talleres mecánicos, estética automotriz y detailing: órdenes de trabajo digitales, checklist fotográfico de ingreso y daños, seguimiento online con QR para clientes, cuentas corrientes y control de caja diaria.";
+const canonicalURL = new URL(Astro.url.pathname, Astro.site || 'https://autodealer.com.ar');
+const ogImage = "https://autodealer.com.ar/img/autofixer/logo-h.png";
+---
+
+<html lang="es">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/png" href="/img/autofixer/logo.png" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="generator" content={Astro.generator} />
+		<meta name="theme-color" content="#d9a406" />
+
+		<!-- Preconnect Google Fonts -->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+
+		<!-- Primary Meta Tags -->
+		<title>{title}</title>
+		<meta name="title" content={title} />
+		<meta name="description" content={description} />
+		<meta name="keywords" content="sistema para taller mecanico, software para detailing, gestion de ordenes de trabajo, checklist ingreso de vehiculos, cuentas corrientes taller mecanico, seguimiento qr para clientes, control de caja taller, software chapa y pintura, sistema para lubricentros, AutoFixer, AutoDealer" />
+		<meta name="author" content="Lautaro Silverii - AutoDealer" />
+		<link rel="canonical" href={canonicalURL} />
+
+		<!-- Open Graph / Facebook -->
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content={canonicalURL} />
+		<meta property="og:title" content={title} />
+		<meta property="og:description" content={description} />
+		<meta property="og:image" content={ogImage} />
+		<meta property="og:locale" content="es_AR" />
+		<meta property="og:site_name" content="AutoFixer by AutoDealer" />
+
+		<!-- Twitter -->
+		<meta property="twitter:card" content="summary_large_image" />
+		<meta property="twitter:url" content={canonicalURL} />
+		<meta property="twitter:title" content={title} />
+		<meta property="twitter:description" content={description} />
+		<meta property="twitter:image" content={ogImage} />
+
+		<!-- Structured Data (JSON-LD) -->
+		<script type="application/ld+json" is:inline>
+			[
+				{
+					"@context": "https://schema.org",
+					"@type": "SoftwareApplication",
+					"name": "AutoFixer",
+					"operatingSystem": "Web",
+					"applicationCategory": "BusinessApplication",
+					"description": "Sistema de gestión integral para talleres mecánicos, lubricentros y centros de detailing automotriz: órdenes de trabajo con checklist fotográfico, seguimiento con QR para clientes, cuentas corrientes y caja.",
+					"offers": {
+						"@type": "Offer",
+						"name": "AutoFixer Taller",
+						"priceCurrency": "ARS",
+						"price": "0",
+						"availability": "https://schema.org/InStock"
+					}
+				}
+			]
+		</script>
+	</head>
+	<body class="bg-slate-50 text-slate-900 antialiased font-sans">
+		<AutoFixerPage client:load />
+	</body>
+</html>
+

@@ -43,6 +43,9 @@ if (
     $email = filter_var($data->email, FILTER_SANITIZE_EMAIL);
     $telefono = htmlspecialchars(strip_tags($data->telefono ?? ''));
     $concesionario = htmlspecialchars(strip_tags($data->concesionario ?? ''));
+    $taller = htmlspecialchars(strip_tags($data->taller ?? ''));
+    $origen = htmlspecialchars(strip_tags($data->origen ?? 'AutoDealer'));
+    $tipo_taller = htmlspecialchars(strip_tags($data->tipo_taller ?? ''));
     $asunto = htmlspecialchars(strip_tags($data->asunto ?? 'consulta'));
     $mensaje = htmlspecialchars(strip_tags($data->mensaje));
 
@@ -50,7 +53,10 @@ if (
         'consulta' => 'Consulta sobre el sistema',
         'contratar' => 'Contratar servicio',
         'especial' => 'Servicio especializado',
-        'general' => 'Consulta general'
+        'general' => 'Consulta general',
+        'autofixer_consulta' => 'AutoFixer - Consulta sobre el sistema para taller',
+        'autofixer_demo' => 'AutoFixer - Solicitud de Demo para taller',
+        'autofixer_contratar' => 'AutoFixer - Contratación del sistema'
     ];
 
     // Validar el formato del correo
@@ -62,15 +68,24 @@ if (
 
     // 6. Configurar el envío del correo
     $destinatario = "administracion@autodealer.com.ar"; // ACÁ PONÉS EL CORREO DONDE QUERÉS RECIBIR LOS MENSAJES
-    $asunto_email = "Nuevo contacto web: " . ((isset($aAsuntos[$asunto])) ? $aAsuntos[$asunto] : 'Otro');
+    $asunto_texto = isset($aAsuntos[$asunto]) ? $aAsuntos[$asunto] : $asunto;
+    $asunto_email = "Nuevo contacto [{$origen}]: {$asunto_texto}";
 
     // Armar el cuerpo del mensaje
-    $cuerpo = "Has recibido un nuevo mensaje desde el formulario web:\n\n";
+    $cuerpo = "Has recibido un nuevo mensaje desde el sitio web ({$origen}):\n\n";
     $cuerpo .= "Nombre: {$nombre}\n";
     $cuerpo .= "Email: {$email}\n";
     $cuerpo .= "Teléfono: {$telefono}\n";
-    $cuerpo .= "Concesionario: {$concesionario}\n";
-    $cuerpo .= "Asunto: {$asunto}\n";
+    if (!empty($taller)) {
+        $cuerpo .= "Taller / Negocio: {$taller}\n";
+    }
+    if (!empty($tipo_taller)) {
+        $cuerpo .= "Tipo de Taller / Especialidad: {$tipo_taller}\n";
+    }
+    if (!empty($concesionario)) {
+        $cuerpo .= "Concesionario: {$concesionario}\n";
+    }
+    $cuerpo .= "Motivo: {$asunto_texto}\n";
     $cuerpo .= "Mensaje:\n{$mensaje}\n";
 
     // 7. Enviar con PHPMailer

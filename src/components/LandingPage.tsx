@@ -14,7 +14,8 @@ import {
   MessageSquare,
   ChevronRight,
   Menu,
-  X
+  X,
+  Wrench
 } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 import { Showcase } from './Showcase';
@@ -47,6 +48,17 @@ const Navbar = () => {
             <a href="#beneficios" className="text-sm font-medium text-slate-600 hover:text-primary transition-colors">Beneficios</a>
             {/* <a href="#capturas" className="text-sm font-medium text-slate-600 hover:text-primary transition-colors">Capturas</a> */}
             <a href="#demos" className="text-sm font-medium text-slate-600 hover:text-primary transition-colors">Demos</a>
+            <a
+              href="/autofixer"
+              className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-amber-500/10 text-amber-600 hover:bg-amber-500 hover:text-slate-950 transition-all text-xs font-bold uppercase tracking-wider border border-amber-500/20 group"
+              title="AutoFixer: Software para talleres mecánicos y detailing"
+            >
+              <Wrench className="w-3.5 h-3.5 text-amber-500 group-hover:text-slate-950" />
+              <span>AutoFixer</span>
+              <span className="bg-amber-500 text-slate-950 text-[9px] px-1.5 py-0.2 rounded-full font-black group-hover:bg-slate-950 group-hover:text-white">
+                NUEVO
+              </span>
+            </a>
             <a href="#contacto" className="btn-primary !py-2 !px-5 text-sm">Contactar</a>
           </div>
 
@@ -71,6 +83,19 @@ const Navbar = () => {
               <a href="#beneficios" onClick={() => setIsOpen(false)} className="block px-3 py-2 text-base font-medium text-slate-600 hover:text-primary">Beneficios</a>
               {/* <a href="#capturas" onClick={() => setIsOpen(false)} className="block px-3 py-2 text-base font-medium text-slate-600 hover:text-primary">Capturas</a> */}
               <a href="#demos" onClick={() => setIsOpen(false)} className="block px-3 py-2 text-base font-medium text-slate-600 hover:text-primary">Demos</a>
+              <a
+                href="/autofixer"
+                onClick={() => setIsOpen(false)}
+                className="flex items-center justify-between px-3 py-2.5 text-sm font-bold text-amber-700 bg-amber-50 rounded-xl border border-amber-200"
+              >
+                <span className="flex items-center gap-2">
+                  <Wrench className="w-4 h-4 text-amber-600" />
+                  AutoFixer (Talleres & Detailing)
+                </span>
+                <span className="bg-amber-500 text-slate-950 text-[9px] font-black px-2 py-0.5 rounded-full uppercase">
+                  Nuevo
+                </span>
+              </a>
               <a href="#contacto" onClick={() => setIsOpen(false)} className="block px-3 py-2 text-base font-medium text-primary font-bold">Contactar</a>
             </div>
           </motion.div>
@@ -353,6 +378,102 @@ const AutoWorth = () => (
   </section>
 );
 
+const AutoFixerTeaser = () => (
+  <section className="py-20 bg-slate-900 text-white relative overflow-hidden border-y border-slate-800">
+    <div className="absolute top-0 right-1/4 w-96 h-96 bg-amber-500/10 rounded-full blur-3xl -z-10 pointer-events-none" />
+    <div className="absolute bottom-0 left-10 w-80 h-80 bg-amber-600/5 rounded-full blur-3xl -z-10 pointer-events-none" />
+
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 rounded-3xl p-8 sm:p-12 border border-slate-800 shadow-2xl relative overflow-hidden">
+        <div className="grid lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+          <div className="lg:col-span-8 space-y-6">
+            <div className="inline-flex items-center gap-2 py-1.5 px-3.5 rounded-full bg-amber-500/10 border border-amber-500/20 text-amber-400 text-xs font-bold uppercase tracking-wider">
+              <Wrench className="w-3.5 h-3.5" />
+              Nueva Variante AutoDealer · Para Talleres y Detailing
+            </div>
+
+            <div className="flex items-center gap-4">
+              <img
+                src="/img/autofixer/logo-h.png"
+                alt="AutoFixer Logo"
+                className="h-9 sm:h-11 w-auto object-contain"
+              />
+            </div>
+
+            <h3 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
+              ¿Tenés un taller mecánico o centro de detailing?
+            </h3>
+
+            <p className="text-base sm:text-lg text-slate-300 leading-relaxed max-w-2xl">
+              Descubrí <strong className="text-white">AutoFixer</strong>, la nueva plataforma especializada para organizar tus órdenes de trabajo con checklist fotográfico de ingreso, seguimiento en tiempo real con QR para clientes, cuentas corrientes y movimientos de caja diaria.
+            </p>
+
+            <div className="grid sm:grid-cols-2 gap-3 pt-2">
+              <div className="flex items-center gap-2.5 text-sm text-slate-200">
+                <CheckCircle2 className="w-4 h-4 text-amber-400 shrink-0" />
+                <span>Órdenes de trabajo y estados en vivo</span>
+              </div>
+              <div className="flex items-center gap-2.5 text-sm text-slate-200">
+                <CheckCircle2 className="w-4 h-4 text-amber-400 shrink-0" />
+                <span>Checklist de recepción & daños previos</span>
+              </div>
+              <div className="flex items-center gap-2.5 text-sm text-slate-200">
+                <CheckCircle2 className="w-4 h-4 text-amber-400 shrink-0" />
+                <span>Tracking online para clientes con QR</span>
+              </div>
+              <div className="flex items-center gap-2.5 text-sm text-slate-200">
+                <CheckCircle2 className="w-4 h-4 text-amber-400 shrink-0" />
+                <span>Cuentas corrientes, mecánicos y caja</span>
+              </div>
+            </div>
+
+            <div className="pt-4 flex flex-col sm:flex-row gap-4">
+              <a
+                href="/autofixer"
+                className="btn-primary !bg-amber-500 hover:!bg-amber-400 text-slate-950 font-extrabold flex items-center justify-center gap-2 text-sm sm:text-base py-3.5 px-6 shadow-lg shadow-amber-500/20"
+              >
+                Conocer AutoFixer <ArrowRight className="w-4 h-4" />
+              </a>
+              <a
+                href="/autofixer#contacto"
+                className="bg-slate-800 hover:bg-slate-700 border border-slate-700 text-white font-semibold py-3.5 px-6 rounded-xl transition-all flex items-center justify-center gap-2 text-sm hover:border-amber-500/40"
+              >
+                Solicitar Demo para Taller
+              </a>
+            </div>
+          </div>
+
+          <div className="lg:col-span-4 flex justify-center">
+            <div className="relative w-full max-w-xs p-6 rounded-3xl bg-slate-900 border border-amber-500/30 shadow-xl text-center space-y-4">
+              <div className="w-16 h-16 rounded-2xl bg-amber-500/10 text-amber-400 flex items-center justify-center mx-auto border border-amber-500/20">
+                <Wrench className="w-8 h-8" />
+              </div>
+              <div className="space-y-1">
+                <h4 className="text-xl font-bold text-white">AutoFixer</h4>
+                <p className="text-xs text-slate-400">Taller Mecánico & Detailing</p>
+              </div>
+              <div className="bg-slate-950/70 p-3.5 rounded-xl border border-slate-800 text-left text-xs space-y-2">
+                <div className="flex justify-between text-slate-400 font-mono">
+                  <span>OT #1042</span>
+                  <span className="text-emerald-400 font-bold">● Lista</span>
+                </div>
+                <div className="font-semibold text-white">Ford Ranger 3.2 TDCi</div>
+                <div className="text-[10px] text-slate-400">Seguimiento QR activo</div>
+              </div>
+              <a
+                href="/autofixer"
+                className="text-xs font-bold text-amber-400 hover:text-amber-300 inline-flex items-center gap-1 transition-colors"
+              >
+                Ver todo sobre AutoFixer →
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+);
+
 const History = () => (
   <section id="historia" className="py-24 overflow-hidden">
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -612,6 +733,10 @@ const Footer = () => (
           <span>© {new Date().getFullYear()} AutoDealer. Todos los derechos reservados.</span>
           <span className="hidden md:inline text-slate-200">|</span>
           <a href="/politicas-de-privacidad" className="text-slate-600 hover:text-primary transition-colors font-medium">Políticas de Privacidad</a>
+          <span className="hidden md:inline text-slate-200">|</span>
+          <a href="/autofixer" className="text-amber-600 hover:text-amber-700 transition-colors font-semibold flex items-center gap-1">
+            <Wrench className="w-3.5 h-3.5" /> AutoFixer (Talleres)
+          </a>
         </div>
 
         <div className="flex gap-6">
@@ -714,6 +839,7 @@ export default function App() {
         <Hero />
         <Services />
         <AutoWorth />
+        <AutoFixerTeaser />
         <Benefits />
         {/* <Showcase /> */}
         <VideoShowcase />
