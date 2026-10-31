@@ -146,14 +146,13 @@ export const VideoShowcase = () => {
         {/* Header Section */}
         <div className="text-center mb-16 relative">
           <span className="inline-flex items-center gap-2 py-1.5 px-4 rounded-full bg-primary/10 border border-primary/20 text-primary text-xs font-bold uppercase tracking-wider mb-4">
-            <Tv className="w-4 h-4" /> El Sistema en Acción
+            <Tv className="w-4 h-4" /> AutoDealer Dedicado en Acción · Demos en Video
           </span>
           <h2 className="text-4xl md:text-5xl font-extrabold tracking-tight mb-6">
-            Videotutoriales del <span className="text-primary bg-gradient-to-r from-primary to-primary-light bg-clip-text text-transparent">Sistema Dedicado</span>
+            Conocé <span className="text-primary bg-gradient-to-r from-primary to-primary-light bg-clip-text text-transparent">AutoDealer Dedicado</span> por dentro
           </h2>
           <p className="text-lg text-slate-400 max-w-3xl mx-auto leading-relaxed">
-            Explorá el funcionamiento interno de AutoDealer Dedicado a través de estas demostraciones paso a paso.
-            Descubrí por qué somos el ERP más robusto y cómodo del mercado automotriz.
+            Explorá en video cada módulo de nuestro sistema ERP para concesionarios de usados y 0KM: inventario, ventas financiadas, portal web de cuentas corrientes para clientes, cajas y estadísticas.
           </p>
         </div>
 

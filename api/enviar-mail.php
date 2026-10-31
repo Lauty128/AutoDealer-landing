@@ -50,9 +50,12 @@ if (
     $mensaje = htmlspecialchars(strip_tags($data->mensaje));
 
     $aAsuntos = [
+        'dedicado' => 'AutoDealer Dedicado - ERP Concesionarios',
+        'catalogo' => 'Catálogo AutoDealer - 30 días gratis',
+        'autoworth' => 'AutoWorth - Cotizador Digital',
         'consulta' => 'Consulta sobre el sistema',
         'contratar' => 'Contratar servicio',
-        'especial' => 'Servicio especializado',
+        'especial' => 'Servicio especializado / Desarrollo a medida',
         'general' => 'Consulta general',
         'autofixer_consulta' => 'AutoFixer - Consulta sobre el sistema para taller',
         'autofixer_demo' => 'AutoFixer - Solicitud de Demo para taller',

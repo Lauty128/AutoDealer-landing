@@ -200,10 +200,7 @@ export const AutoFixerPage = () => {
 
             {/* Subtitle */}
             <p className="text-lg sm:text-xl text-slate-300 max-w-3xl mx-auto mb-10 leading-relaxed font-normal">
-              Olvidate de las libretas, órdenes de papel y mensajes desorganizados por WhatsApp.
-              Administrá tus <strong>órdenes de trabajo</strong> con checklist de ingreso y fotos de daños,
-              <strong>cuentas corrientes</strong> de clientes, <strong>productividad de mecánicos</strong> y 
-              <strong>cajas diarias</strong> con seguimiento en vivo por QR.
+              Un sistema de gestión integral como <strong>AutoDealer Dedicado</strong>, pero diseñado para talleres mecánicos, detailing y servicios vehiculares. Generá <strong>órdenes de trabajo que progresan de estado</strong> hasta estar listas para retirar, brindale a tu cliente un <strong>link de seguimiento en vivo</strong> para que no tenga que preguntar a cada rato, y gestioná cuentas corrientes, empleados y caja.
             </p>
 
             {/* Action buttons */}
@@ -1300,33 +1297,33 @@ export const AutoFixerPage = () => {
       </section>
 
       {/* FOOTER */}
-      <footer className="py-12 bg-slate-950 text-slate-400 border-t border-slate-800">
+      <footer className="py-12 bg-white text-slate-500 border-t border-slate-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-8">
             <div className="flex items-center gap-4">
-              <img src="/img/autofixer/logo.png" alt="AutoFixer Logo" className="w-12 h-12 object-contain" />
+              <img src="/img/autofixer/logo.png" alt="AutoFixer Logo" className="w-14 h-14 object-contain" />
               <div>
-                <span className="font-extrabold text-white text-lg tracking-tight block">AutoFixer</span>
+                <span className="font-extrabold text-slate-900 text-lg tracking-tight block">AutoFixer</span>
                 <span className="text-xs text-slate-500">Gestión para Talleres y Detailing</span>
               </div>
             </div>
 
             <div className="text-xs text-slate-500 flex flex-col md:flex-row items-center gap-4">
               <span>© {new Date().getFullYear()} AutoFixer · Desarrollado por AutoDealer Argentina.</span>
-              <span className="hidden md:inline text-slate-700">|</span>
-              <a href="/politicas-de-privacidad" className="hover:text-amber-400 transition-colors">
+              <span className="hidden md:inline text-slate-200">|</span>
+              <a href="/politicas-de-privacidad" className="text-slate-600 hover:text-amber-600 transition-colors font-medium">
                 Políticas de Privacidad
               </a>
-              <span className="hidden md:inline text-slate-700">|</span>
-              <a href="/" className="hover:text-amber-400 transition-colors">
-                Ir a AutoDealer (Concesionarios)
+              <span className="hidden md:inline text-slate-200">|</span>
+              <a href="/" className="text-slate-600 hover:text-amber-600 transition-colors font-medium">
+                Ir a AutoDealer (Ecosistema)
               </a>
             </div>
 
             <div className="flex items-center gap-4 text-xs font-semibold">
-              <a href="#modulos" className="hover:text-white transition-colors">Módulos</a>
-              <a href="#rubros" className="hover:text-white transition-colors">Especialidades</a>
-              <a href="#contacto" className="text-amber-400 hover:underline">Contacto</a>
+              <a href="#modulos" className="text-slate-600 hover:text-slate-900 transition-colors">Módulos</a>
+              <a href="#rubros" className="text-slate-600 hover:text-slate-900 transition-colors">Especialidades</a>
+              <a href="#contacto" className="text-amber-600 hover:underline">Contacto</a>
             </div>
           </div>
         </div>
