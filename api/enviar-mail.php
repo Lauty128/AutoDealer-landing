@@ -44,14 +44,16 @@ if (
     $telefono = htmlspecialchars(strip_tags($data->telefono ?? ''));
     $concesionario = htmlspecialchars(strip_tags($data->concesionario ?? ''));
     $taller = htmlspecialchars(strip_tags($data->taller ?? ''));
-    $origen = htmlspecialchars(strip_tags($data->origen ?? 'AutoDealer'));
+    $origen = htmlspecialchars(strip_tags($data->origen ?? 'Silverii'));
     $tipo_taller = htmlspecialchars(strip_tags($data->tipo_taller ?? ''));
     $asunto = htmlspecialchars(strip_tags($data->asunto ?? 'consulta'));
     $mensaje = htmlspecialchars(strip_tags($data->mensaje));
 
     $aAsuntos = [
-        'dedicado' => 'AutoDealer Dedicado - ERP Concesionarios',
-        'catalogo' => 'Catálogo AutoDealer - 30 días gratis',
+        'dealerpro' => 'DealerPro - ERP Concesionarios',
+        'tuconcesionario' => 'tuconcesionario.ar - Catálogo para agencias',
+        'dedicado' => 'DealerPro - ERP Concesionarios',
+        'catalogo' => 'tuconcesionario.ar - Catálogo para agencias',
         'autoworth' => 'AutoWorth - Cotizador Digital',
         'consulta' => 'Consulta sobre el sistema',
         'contratar' => 'Contratar servicio',
@@ -70,7 +72,7 @@ if (
     }
 
     // 6. Configurar el envío del correo
-    $destinatario = "administracion@autodealer.com.ar"; // ACÁ PONÉS EL CORREO DONDE QUERÉS RECIBIR LOS MENSAJES
+    $destinatario = "administracion@silverii.com.ar"; // ACÁ PONÉS EL CORREO DONDE QUERÉS RECIBIR LOS MENSAJES
     $asunto_texto = isset($aAsuntos[$asunto]) ? $aAsuntos[$asunto] : $asunto;
     $asunto_email = "Nuevo contacto [{$origen}]: {$asunto_texto}";
 
@@ -97,15 +99,15 @@ if (
     try {
         // --- CONFIGURACIÓN DEL SERVIDOR SMTP ---
         // Cambiá a true si querés usar un servidor SMTP externo (ej: Gmail, Outlook, Hostinger)
-        $usar_smtp = false;
+        $usar_smtp = true;
 
         if ($usar_smtp) {
             $mail->isSMTP();
             $mail->Host       = 'smtp.hostinger.com';             // Servidor SMTP
             $mail->SMTPAuth   = true;                             // Habilitar autenticación SMTP
-            $mail->Username   = 'administracion@autodealer.com.ar';         // Usuario SMTP (tu correo)
-            $mail->Password   = '~A&eUfY0z';                  // Contraseña SMTP
-            $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;   // Habilitar encriptación TLS (o ENCRYPTION_SMTPS para SSL/465)
+            $mail->Username   = 'administracion@silverii.com.ar';         // Usuario SMTP (tu correo)
+            $mail->Password   = 't!J*5XY_zQbyzW#';                  // Contraseña SMTP
+            $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;   // Habilitar encriptación SSL/465
             $mail->Port       = 465;                              // Puerto TCP para conectar (587 para TLS, 465 para SSL)
         } else {
             // Usar la función mail() nativa de tu servidor, pero a través de PHPMailer
@@ -116,7 +118,7 @@ if (
         $mail->CharSet = 'UTF-8';
 
         // --- DESTINATARIOS Y REMITENTE ---
-        $mail->setFrom('administracion@autodealer.com.ar', 'AutoDealer Web');
+        $mail->setFrom('administracion@silverii.com.ar', 'Silverii - Gestión Automotriz');
         $mail->addAddress($destinatario);                         // Correo receptor
         $mail->addReplyTo($email, $nombre);                       // Responder al remitente de la consulta
 

@@ -3,6 +3,7 @@ import react from '@astrojs/react';
 import tailwind from '@astrojs/tailwind';
 
 export default defineConfig({
+  site: 'https://silverii.com.ar',
   integrations: [react(), tailwind()],
   server: {
     port: 3000,

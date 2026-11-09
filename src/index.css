@@ -4,25 +4,25 @@
 
 @layer base {
   body {
-    @apply bg-white text-slate-900 antialiased;
+    @apply bg-[#111B32] text-white antialiased;
   }
 }
 
 @layer components {
   .glass-card {
-    @apply bg-white/80 backdrop-blur-md border border-slate-200 shadow-sm;
+    @apply bg-[#16223D]/80 backdrop-blur-md border border-white/10 shadow-sm;
   }
 
   .btn-primary {
-    @apply bg-primary hover:bg-primary-dark text-white font-semibold py-3 px-6 rounded-xl transition-all duration-200 shadow-md hover:shadow-lg active:scale-95;
+    @apply bg-primary hover:bg-primary-light text-slate-950 font-bold py-3 px-6 rounded-xl transition-all duration-200 shadow-md hover:shadow-lg active:scale-95;
   }
 
   .section-title {
-    @apply text-3xl md:text-4xl font-bold text-slate-900 mb-4;
+    @apply text-3xl md:text-4xl font-extrabold text-white mb-4;
   }
 
   .section-subtitle {
-    @apply text-lg text-slate-600 max-w-2xl mx-auto mb-12;
+    @apply text-lg text-slate-300 max-w-2xl mx-auto mb-12;
   }
 }
 

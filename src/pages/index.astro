@@ -2,10 +2,10 @@
 import LandingPage from '../components/LandingPage.tsx';
 import '../index.css';
 
-const title = "AutoDealer - Ecosistema de Software para Concesionarios, Agencias y Talleres Automotrices";
-const description = "Infraestructura digital completa para el rubro automotor: Catálogo AutoDealer (30 días gratis), AutoDealer Dedicado (ERP para concesionarios de usados y 0km), AutoWorth (cotizador digital gratuito) y AutoFixer (gestión para talleres mecánicos y detailing).";
-const canonicalURL = new URL(Astro.url.pathname, Astro.site || 'https://autodealer.com.ar');
-const ogImage = "https://autodealer.com.ar/logo.png";
+const title = "Silverii - Gestión Automotriz | Software ERP para Concesionarios y Talleres";
+const description = "Plataforma integral de software y gestión automotriz en Argentina. Descubrí DealerPro (ERP para concesionarios), tuconcesionario.ar (catálogo web de vehículos), AutoWorth (cotizador gratuito de precios) y AutoFixer (software para talleres mecánicos y detailing).";
+const canonicalURL = new URL(Astro.url.pathname, Astro.site || 'https://silverii.com.ar');
+const ogImage = "https://silverii.com.ar/logo-full.png";
 ---
 
 <html lang="es">
@@ -14,7 +14,7 @@ const ogImage = "https://autodealer.com.ar/logo.png";
 		<link rel="icon" type="image/png" href="/logo.png" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<meta name="generator" content={Astro.generator} />
-		<meta name="theme-color" content="#dcac0c" />
+		<meta name="theme-color" content="#111B32" />
 
 		<!-- Preconnect Google Fonts -->
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -25,8 +25,9 @@ const ogImage = "https://autodealer.com.ar/logo.png";
 		<title>{title}</title>
 		<meta name="title" content={title} />
 		<meta name="description" content={description} />
-		<meta name="keywords" content="gestión de concesionarios, software automotriz, ERP para agencias de autos, Catálogo AutoDealer, AutoWorth, AutoFixer, AutoDealer Dedicado, catálogo online vehículos, generador de flyers autos, precios de autos Argentina, sistema para talleres mecánicos, software detailing, cuentas corrientes concesionario" />
-		<meta name="author" content="Lautaro Silverii" />
+		<meta name="keywords" content="Silverii, Silverii Gestión Automotriz, software para concesionarias, erp para agencias de autos, sistema de gestion automotriz argentina, DealerPro, tuconcesionario.ar, catalogo online de autos, AutoWorth precios de autos, AutoFixer, software para taller mecanico, sistema para detailing, cuentas corrientes concesionario, administracion de flota de vehiculos, ordenes de trabajo taller, software automotriz argentina" />
+		<meta name="author" content="Lautaro Silverii - Silverii Gestión Automotriz" />
+		<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
 		<link rel="canonical" href={canonicalURL} />
 
 		<!-- Open Graph / Facebook -->
@@ -36,7 +37,7 @@ const ogImage = "https://autodealer.com.ar/logo.png";
 		<meta property="og:description" content={description} />
 		<meta property="og:image" content={ogImage} />
 		<meta property="og:locale" content="es_AR" />
-		<meta property="og:site_name" content="AutoDealer" />
+		<meta property="og:site_name" content="Silverii - Gestión Automotriz" />
 
 		<!-- Twitter -->
 		<meta property="twitter:card" content="summary_large_image" />
@@ -51,10 +52,11 @@ const ogImage = "https://autodealer.com.ar/logo.png";
 				{
 					"@context": "https://schema.org",
 					"@type": "Organization",
-					"name": "AutoDealer",
-					"url": "https://autodealer.com.ar",
-					"logo": "https://autodealer.com.ar/logo.png",
-					"description": "Infraestructura tecnológica integral para concesionarios, agencias de vehículos, talleres mecánicos y centros de detailing en Argentina.",
+					"name": "Silverii - Gestión Automotriz",
+					"alternateName": "Silverii",
+					"url": "https://silverii.com.ar",
+					"logo": "https://silverii.com.ar/logo-full.png",
+					"description": "Compañía tecnológica argentina proveedora de software y soluciones integrales de gestión para concesionarios, agencias de vehículos, talleres mecánicos y estética automotriz.",
 					"founder": {
 						"@type": "Person",
 						"name": "Lautaro Silverii"
@@ -63,7 +65,7 @@ const ogImage = "https://autodealer.com.ar/logo.png";
 						"@type": "ContactPoint",
 						"telephone": "+54-2284-552868",
 						"contactType": "sales",
-						"email": "administracion@autodealer.com.ar",
+						"email": "administracion@silverii.com.ar",
 						"areaServed": "AR",
 						"availableLanguage": "Spanish"
 					},
@@ -75,11 +77,17 @@ const ogImage = "https://autodealer.com.ar/logo.png";
 				},
 				{
 					"@context": "https://schema.org",
+					"@type": "WebSite",
+					"name": "Silverii - Gestión Automotriz",
+					"url": "https://silverii.com.ar"
+				},
+				{
+					"@context": "https://schema.org",
 					"@type": "SoftwareApplication",
-					"name": "Ecosistema AutoDealer",
+					"name": "Ecosistema Silverii - Gestión Automotriz",
 					"operatingSystem": "Web",
 					"applicationCategory": "BusinessApplication",
-					"description": "Ecosistema de software automotor compuesto por Catálogo AutoDealer, AutoDealer Dedicado, AutoWorth y AutoFixer.",
+					"description": "Suite integral de software automotriz compuesta por DealerPro (ERP para concesionarios), tuconcesionario.ar (catálogo web y flyers), AutoWorth (cotizador gratuito de precios) y AutoFixer (ERP para talleres y detailing).",
 					"author": {
 						"@type": "Person",
 						"name": "Lautaro Silverii"
@@ -87,42 +95,99 @@ const ogImage = "https://autodealer.com.ar/logo.png";
 					"offers": [
 						{
 							"@type": "Offer",
-							"name": "AutoWorth",
-							"description": "La revista de autos llevada a digital para consultar precios del mercado en celular y PC. 100% gratis.",
+							"name": "DealerPro",
+							"description": "ERP completo para concesionarios de usados y 0km: control de flota, ventas financiadas, caja multi-moneda, cuentas corrientes con portal para clientes, empleados y comisiones.",
 							"priceCurrency": "ARS",
 							"price": "0",
 							"availability": "https://schema.org/InStock"
 						},
 						{
 							"@type": "Offer",
-							"name": "Catálogo AutoDealer",
-							"description": "Espacio digital para concesionarios, listado de vehículos, generador de flyers y envío de fichas a clientes. 30 días gratis iniciales.",
+							"name": "tuconcesionario.ar",
+							"description": "Vidriera digital y catálogo web para agencias de autos: carga ágil de stock, generador automático de flyers para redes y envío de fichas por WhatsApp. 30 días gratis iniciales.",
 							"priceCurrency": "ARS",
 							"price": "20000",
-							"availability": "https://schema.org/InStock"
+							"availability": "https://schema.org/InStock",
+							"url": "https://tuconcesionario.ar/"
 						},
 						{
 							"@type": "Offer",
-							"name": "AutoDealer Dedicado",
-							"description": "ERP completo para concesionarios de usados y 0km: flota, ventas, cajas, cuentas corrientes con portal de clientes, empleados y comisiones.",
+							"name": "AutoWorth",
+							"description": "La revista de autos llevada a formato digital para celular y PC. Consulta de precios de mercado al instante para compras, ventas y permutas. 100% gratis.",
 							"priceCurrency": "ARS",
 							"price": "0",
-							"availability": "https://schema.org/InStock"
+							"availability": "https://schema.org/InStock",
+							"url": "https://autoworth.com.ar/"
 						},
 						{
 							"@type": "Offer",
 							"name": "AutoFixer",
-							"description": "Sistema de gestión para talleres mecánicos y detailing con órdenes de trabajo progresivas, link de seguimiento en vivo para clientes, cajas y cuentas corrientes.",
+							"description": "Sistema de gestión integral para talleres mecánicos, lubricentros y centros de detailing: órdenes de trabajo por etapas, link de seguimiento en vivo con QR para clientes, cajas y cuentas corrientes.",
 							"priceCurrency": "ARS",
 							"price": "0",
-							"availability": "https://schema.org/InStock"
+							"availability": "https://schema.org/InStock",
+							"url": "https://silverii.com.ar/autofixer"
+						}
+					]
+				},
+				{
+					"@context": "https://schema.org",
+					"@type": "FAQPage",
+					"mainEntity": [
+						{
+							"@type": "Question",
+							"name": "¿Qué es Silverii y qué servicios de gestión automotriz ofrece?",
+							"acceptedAnswer": {
+								"@type": "Answer",
+								"text": "Silverii - Gestión Automotriz es una empresa tecnológica argentina que brinda una suite integral de soluciones para el sector automotor: DealerPro (ERP para concesionarios de usados y 0km), tuconcesionario.ar (vidriera digital y catálogo online para agencias), AutoWorth (cotizador y revista digital gratuita de precios) y AutoFixer (software de órdenes de trabajo para talleres mecánicos y detailing)."
+							}
+						},
+						{
+							"@type": "Question",
+							"name": "¿Cuál es la diferencia entre tuconcesionario.ar y DealerPro?",
+							"acceptedAnswer": {
+								"@type": "Answer",
+								"text": "tuconcesionario.ar es una vidriera web económica y práctica para agencias que desean publicar su stock online, generar flyers automáticos para redes y enviar fichas técnicas por WhatsApp. Por otro lado, DealerPro es un sistema ERP integral para concesionarios que gestiona compras, ventas con permutas, señas, caja multi-moneda, liquidación de comisiones a vendedores y cuentas corrientes con portal web exclusivo para clientes."
+							}
+						},
+						{
+							"@type": "Question",
+							"name": "¿Cómo funciona AutoFixer para talleres mecánicos y detailing?",
+							"acceptedAnswer": {
+								"@type": "Answer",
+								"text": "AutoFixer digitaliza todo el flujo del taller: recepción de vehículos con checklist fotográfico de daños, avance de órdenes por etapas (Recepción, Taller, Repuestos, Calidad y Listo para Retiro) y un link de seguimiento en vivo para el cliente con código QR, eliminando las consultas constantes por WhatsApp."
+							}
+						},
+						{
+							"@type": "Question",
+							"name": "¿AutoWorth es realmente 100% gratuito?",
+							"acceptedAnswer": {
+								"@type": "Answer",
+								"text": "Sí, AutoWorth es una aplicación web y móvil completamente gratuita para agencias, vendedores y compradores. Permite consultar al instante los precios actualizados del mercado automotor argentino para cotizar vehículos con total seguridad antes de cerrar operaciones."
+							}
+						},
+						{
+							"@type": "Question",
+							"name": "¿Los sistemas de Silverii requieren instalación o servidores locales?",
+							"acceptedAnswer": {
+								"@type": "Answer",
+								"text": "No. Todas las soluciones de Silverii funcionan 100% en la nube (Cloud). Se accede desde cualquier dispositivo (PC, notebook, tablet o celular) a través del navegador web, con copias de seguridad automáticas y sin necesidad de instalaciones complicadas."
+							}
+						},
+						{
+							"@type": "Question",
+							"name": "¿Cómo puedo solicitar una demostración o contratar una solución de Silverii?",
+							"acceptedAnswer": {
+								"@type": "Answer",
+								"text": "Podés completar el formulario de contacto de nuestra web indicando qué solución necesitás o comunicarte por WhatsApp al +54 2284-552868 para coordinar una reunión de asesoramiento y demostración."
+							}
 						}
 					]
 				}
 			]
 		</script>
 	</head>
-	<body>
+	<body class="bg-[#111B32] text-white antialiased font-sans">
 		<LandingPage client:load />
 	</body>
 </html>

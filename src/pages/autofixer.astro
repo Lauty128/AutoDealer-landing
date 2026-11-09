@@ -2,10 +2,10 @@
 import AutoFixerPage from '../components/AutoFixerPage.tsx';
 import '../index.css';
 
-const title = "AutoFixer - Sistema de Gestión para Talleres Mecánicos y Detailing | AutoDealer";
-const description = "Software para talleres mecánicos, estética automotriz y detailing: órdenes de trabajo digitales, checklist fotográfico de ingreso y daños, seguimiento online con QR para clientes, cuentas corrientes y control de caja diaria.";
-const canonicalURL = new URL(Astro.url.pathname, Astro.site || 'https://autodealer.com.ar');
-const ogImage = "https://autodealer.com.ar/img/autofixer/logo-h.png";
+const title = "AutoFixer by Silverii | Software de Gestión para Talleres Mecánicos y Detailing";
+const description = "Software para talleres mecánicos, lubricentros y estética automotriz: órdenes de trabajo por etapas, checklist fotográfico de ingreso, link de seguimiento en vivo con QR para clientes, cuentas corrientes y caja diaria.";
+const canonicalURL = new URL(Astro.url.pathname, Astro.site || 'https://silverii.com.ar');
+const ogImage = "https://silverii.com.ar/img/autofixer/logo-h.png";
 ---
 
 <html lang="es">
@@ -14,7 +14,7 @@ const ogImage = "https://autodealer.com.ar/img/autofixer/logo-h.png";
 		<link rel="icon" type="image/png" href="/img/autofixer/logo.png" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<meta name="generator" content={Astro.generator} />
-		<meta name="theme-color" content="#d9a406" />
+		<meta name="theme-color" content="#111B32" />
 
 		<!-- Preconnect Google Fonts -->
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -25,8 +25,9 @@ const ogImage = "https://autodealer.com.ar/img/autofixer/logo-h.png";
 		<title>{title}</title>
 		<meta name="title" content={title} />
 		<meta name="description" content={description} />
-		<meta name="keywords" content="sistema para taller mecanico, software para detailing, gestion de ordenes de trabajo, checklist ingreso de vehiculos, cuentas corrientes taller mecanico, seguimiento qr para clientes, control de caja taller, software chapa y pintura, sistema para lubricentros, AutoFixer, AutoDealer" />
-		<meta name="author" content="Lautaro Silverii - AutoDealer" />
+		<meta name="keywords" content="sistema para taller mecanico, software para detailing, gestion de ordenes de trabajo, checklist ingreso de vehiculos, cuentas corrientes taller mecanico, seguimiento qr para clientes, control de caja taller, software chapa y pintura, sistema para lubricentros, AutoFixer, Silverii, Silverii Gestión Automotriz, software mecanico argentina" />
+		<meta name="author" content="Lautaro Silverii - Silverii Gestión Automotriz" />
+		<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
 		<link rel="canonical" href={canonicalURL} />
 
 		<!-- Open Graph / Facebook -->
@@ -36,7 +37,7 @@ const ogImage = "https://autodealer.com.ar/img/autofixer/logo-h.png";
 		<meta property="og:description" content={description} />
 		<meta property="og:image" content={ogImage} />
 		<meta property="og:locale" content="es_AR" />
-		<meta property="og:site_name" content="AutoFixer by AutoDealer" />
+		<meta property="og:site_name" content="AutoFixer by Silverii" />
 
 		<!-- Twitter -->
 		<meta property="twitter:card" content="summary_large_image" />
@@ -54,20 +55,25 @@ const ogImage = "https://autodealer.com.ar/img/autofixer/logo-h.png";
 					"name": "AutoFixer",
 					"operatingSystem": "Web",
 					"applicationCategory": "BusinessApplication",
-					"description": "Sistema de gestión integral para talleres mecánicos, lubricentros y centros de detailing automotriz: órdenes de trabajo con checklist fotográfico, seguimiento con QR para clientes, cuentas corrientes y caja.",
+					"description": "Sistema de gestión integral para talleres mecánicos, lubricentros y centros de detailing automotriz: órdenes de trabajo con checklist fotográfico, seguimiento en vivo con QR para clientes, cuentas corrientes y caja.",
+					"provider": {
+						"@type": "Organization",
+						"name": "Silverii - Gestión Automotriz",
+						"url": "https://silverii.com.ar"
+					},
 					"offers": {
 						"@type": "Offer",
 						"name": "AutoFixer Taller",
 						"priceCurrency": "ARS",
 						"price": "0",
-						"availability": "https://schema.org/InStock"
+						"availability": "https://schema.org/InStock",
+						"url": "https://silverii.com.ar/autofixer"
 					}
 				}
 			]
 		</script>
 	</head>
-	<body class="bg-slate-50 text-slate-900 antialiased font-sans">
+	<body class="bg-[#111B32] text-white antialiased font-sans">
 		<AutoFixerPage client:load />
 	</body>
 </html>
-

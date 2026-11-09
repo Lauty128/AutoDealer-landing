@@ -97,7 +97,7 @@ const videoModules: VideoModule[] = [
     id: 'tesoreria-comprobantes',
     title: 'Tesorería y Comprobantes',
     tagline: 'Cajas múltiples y respaldo documental',
-    description: 'Gestioná cajas diarias y flujos de fondos con trazabilidad total. En AutoDealer todo movimiento queda respaldado por un comprobante oficial numerado para una administración transparente.',
+    description: 'Gestioná cajas diarias y flujos de fondos con trazabilidad total. En DealerPro todo movimiento queda respaldado por un comprobante oficial numerado para una administración transparente.',
     youtubeId: 'R3gz6Wyn1WA',
     startTime: 0,
     icon: Wallet,
@@ -137,7 +137,7 @@ export const VideoShowcase = () => {
   };
 
   return (
-    <section className="py-24 bg-slate-900 text-white relative overflow-hidden" id="demos">
+    <section className="py-24 bg-[#111B32] text-white relative overflow-hidden border-t border-white/5" id="demos">
       {/* Background decorations */}
       <div className="absolute top-0 left-1/4 w-96 h-96 bg-primary/10 rounded-full blur-3xl -z-10" />
       <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-primary/5 rounded-full blur-3xl -z-10" />
@@ -146,12 +146,12 @@ export const VideoShowcase = () => {
         {/* Header Section */}
         <div className="text-center mb-16 relative">
           <span className="inline-flex items-center gap-2 py-1.5 px-4 rounded-full bg-primary/10 border border-primary/20 text-primary text-xs font-bold uppercase tracking-wider mb-4">
-            <Tv className="w-4 h-4" /> AutoDealer Dedicado en Acción · Demos en Video
+            <Tv className="w-4 h-4" /> DealerPro en Acción · Demos en Video
           </span>
           <h2 className="text-4xl md:text-5xl font-extrabold tracking-tight mb-6">
-            Conocé <span className="text-primary bg-gradient-to-r from-primary to-primary-light bg-clip-text text-transparent">AutoDealer Dedicado</span> por dentro
+            Conocé <span className="text-primary bg-gradient-to-r from-primary to-primary-light bg-clip-text text-transparent">DealerPro</span> por dentro
           </h2>
-          <p className="text-lg text-slate-400 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-lg text-slate-300 max-w-3xl mx-auto leading-relaxed">
             Explorá en video cada módulo de nuestro sistema ERP para concesionarios de usados y 0KM: inventario, ventas financiadas, portal web de cuentas corrientes para clientes, cajas y estadísticas.
           </p>
         </div>
@@ -220,7 +220,7 @@ export const VideoShowcase = () => {
                   <div className="w-3 h-3 rounded-full bg-green-500/80" />
                 </div>
                 <div className="flex items-center gap-2 bg-slate-950 px-4 py-1 rounded-md border border-slate-800/80 text-[10px] text-slate-500 font-mono tracking-tight select-none">
-                  <span>autodealer.com.ar/demos/{activeModule.id}</span>
+                  <span>silverii.com.ar/demos/{activeModule.id}</span>
                 </div>
                 <div className="w-3" />
               </div>
